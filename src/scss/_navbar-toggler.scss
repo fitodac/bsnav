@@ -1,3 +1,47 @@
 .navbar-toggler{
+	border: none;
+	width: 40px;
+	height: 24px;
+	padding: 0;
+	position: relative;
+	border-radius: 0;
+	cursor: pointer;
+
+
+	.navbar-toggler-icon{
+		display: block;
+		top: 0;
 	
+		&,
+		&::before,
+		&::after {
+			background-color: #999;
+			width: 40px;
+			height: 4px;
+			position: absolute;
+			border-radius: 4px;
+			transition-property: transform;
+			transition-duration: 0.15s;
+			transition-timing-function: ease;
+		}
+	
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+		}
+	
+		&::before {
+			top: 10px;
+		}
+	
+		&::after {
+			top: 20px;
+		}
+
+		transition-property: opacity, filter;
+		transition-duration: .15s;
+		transition-timing-function: linear;
+	}//navbar-toggler-icon
+
 }//navbar-toggler
