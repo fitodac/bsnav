@@ -1,0 +1,91 @@
+/*---------------------------------------------------------*/
+/*	NAVIGATION
+/*---------------------------------------------------------*/
+// NAVBAR
+$navbar-radius: 0 !default;
+$navbar-transition: .5s !default;
+$navbar-transition-timing-function: ease-out !default;
+$navbar-transition-delay: .1s !default;
+$navbar-spacer: 15px !default;
+
+
+$navbar-default-bg: #fff !default;
+// $navbar-default-border-color: #fff !default;
+
+
+$navbar-inverse-bg: #000 !default;
+// $navbar-inverse-border-color: #000 !default;
+
+
+$nav-item-font: 'sans-serif' !default;
+$nav-item-font-size: .9rem !default;
+$nav-item-font-weight: 500 !default;
+
+
+$nav-link-color: rgba(#1a1a1a, .7) !default;
+$nav-link-line-height: 1 !default;
+$nav-link-spacer-y: 22px !default;
+$nav-link-spacer-x: 15px !default;
+$nav-link-transition: .2s !default;
+
+$nav-link-hover-bg: transparent !default;
+$nav-link-hover-color: #1a1a1a !default;
+
+$nav-light-link-color: rgba(#fff, .7) !default;
+$nav-light-link-hover-bg: transparent !default;
+$nav-light-link-hover-color: #fff !default;
+
+$nav-default-link-color: #7f8c8d !default;
+$nav-default-link-hover-bg: transparent !default;
+$nav-default-link-hover-color: #222 !default;
+
+$nav-inverse-link-color: #bdc3c8 !default;
+$nav-inverse-link-hover-bg: transparent !default;
+$nav-inverse-link-hover-color: #fff !default;
+
+$zindex-fixed: 1030 !default;
+$zindex-sticky: 1030 !default;
+
+
+
+
+
+// NAV STACKED
+$nav-stacked-font: $nav-item-font !default;
+$nav-stacked-font-size: $nav-item-font-size !default;
+$nav-stacked-font-weight: $nav-item-font-weight !default;
+
+$nav-stacked-link-color: $nav-default-link-color !default;
+$nav-stacked-link-spacer-y: 5px !default;
+$nav-stacked-link-spacer-x: 20px !default;
+$nav-stacked-link-transition: .3s ease-out !default;
+
+$nav-stacked-link-hover-bg: #ECF0F1 !default;
+
+
+
+
+
+// NAVBAR TOGGLE BUTTON
+// $nav-btn-color: #7f8c8d !default;
+// $nav-btn-bar-height: 4px !default;
+$nav-btn-width: 34px !default;
+$nav-btn-height: $nav-btn-width !default;
+$nav-btn-spacer-y: 5px !default;
+$nav-btn-transition: .2s !default;
+
+
+
+
+// DROPDOWN
+$subnavbar-min-width: 180px !default;
+$subnavbar-bg: #fff !default;
+$subnavbar-transition: .3s !default;
+$subnavbar-transition-timing-function: ease-out !default;
+$subnavbar-transition-delay: .3s !default;
+$subnavbar-translate-y: -5000% !default;
+$subnavbar-spacer-y: 14px !default;
+$subnavbar-spacer-x: 16px !default;
+$subnavbar-hover-bg: #eee !default;
+$subnavbar-scale: 1.1 !default;
+$subnavbar-clip: 3000px !default;

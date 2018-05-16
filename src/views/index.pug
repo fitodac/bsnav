@@ -1,0 +1,76 @@
+extends templates/_template.pug
+
+block content
+	.jumbotron.jumbotron-fluid.bg-info.text-white
+		.container.text-center
+			h1.display-4 bsnav
+			p.lead Bootstrap navbar with esteroids
+
+
+	.container
+
+		h4 Styles
+
+		.row.mb-3
+			.col-sm-6
+				a.card(href="#" target="_blank")
+					.card-body
+						.card-text Navbar default
+						small.card-text The default clear style for navbars
+
+			.col-sm-6
+				a.card(href="#" target="_blank")
+					.card-body
+						.card-text Navbar inverse
+						small.card-text Dark background navbar
+
+		.row.mb-5
+			.col-sm-6
+				a.card(href="#" target="_blank")
+					.card-body
+						.card-text Navbar transparent
+						small.card-text Transparent navbar, perfect to use over images
+
+			.col-sm-6
+				a.card(href="#" target="_blank")
+					.card-body
+						.card-text Navbar light
+						small.card-text Transparent navbar with white items
+
+
+
+
+		h4 Layout
+
+		.row.mb-3
+			.col-sm-4
+				a.card(href="navbar-right.html" target="_blank")
+					.card-body
+						.card-text Navbar menu right
+						small.card-text Navbar with menu at right
+
+			.col-sm-4
+				a.card(href="navbar-left.html" target="_blank")
+					.card-body
+						.card-text Navbar menu left
+						small.card-text Navbar with menu at left
+
+			.col-sm-4
+				a.card(href="brand-centered.html" target="_blank")
+					.card-body
+						.card-text Brand at center
+						small.card-text Navbar with the brand at the center
+
+
+
+
+
+
+
+	.jumbotron.jumbotron-fluid.bg-white
+		.container
+			p: strong Credits
+			p.
+				Framework: #[a(href="http://getbootstrap.com/") Bootstrap v4] #[br]
+				Icons: #[a(href="https://github.com/icons8/line-awesome") Line Awesome] #[br]
+				Javascript: #[a(href="https://code.jquery.com/jquery/") jQuery], #[a(href="http://getbootstrap.com/") Bootstrap] #[br]

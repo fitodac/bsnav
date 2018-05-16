@@ -1,0 +1,31 @@
+extends templates/_template.pug
+
+block content
+	.navbar.navbar-expand-lg
+		a.navbar-brand(href="#") Navbar
+		button.navbar-toggler
+			span.navbar-toggler-icon
+
+
+		.collapse.navbar-collapse
+			ul.navbar-nav.mr-0
+				li.nav-item.active
+					a.nav-link(href="#") Home
+				li.nav-item
+					a.nav-link(href="#") About Us
+				li.nav-item
+					a.nav-link(href="#") News
+				li.nav-item
+					a.nav-link(href="#") Gallery
+				li.nav-item
+					a.nav-link(href="#") Contact
+
+
+	.jumbotron.jumbotron-fluid
+
+
+	style.
+		.jumbotron{
+			background: url('https://picsum.photos/1400/700?image=823') no-repeat center bottom / cover;
+			height: 600px;
+		}

@@ -1,0 +1,114 @@
+/*---------------------------------------------------------*/
+/*	NAV PLACEMENT
+/*---------------------------------------------------------*/
+.navbar{
+
+	&.fixed-top{
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: $zindex-fixed;
+	}//fixed-top
+
+
+	&.fixed-bottom{
+		margin: 0;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: $zindex-fixed;
+	}//fixed-bottom
+
+
+	&.sticky{
+		position: sticky;
+		top: 0;
+		z-index: $zindex-sticky;
+	}//sticky-top
+
+
+	&.absolute-top{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: $zindex-fixed;
+	}//fixed-top
+
+
+	&.absolute-bottom{
+		margin: 0;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: $zindex-fixed;
+	}//fixed-bottom
+
+
+
+
+
+
+	/*---------------------------------------------------------*/
+	/*	NAV TOGGLE
+	/*---------------------------------------------------------*/
+	&[data-navbar-toggle]{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+	}//[data-navbar-toggle]
+	
+
+	// SLIDE
+	&.navbar-slide{
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		transform: translateY(-100%);
+
+
+		&.in{
+			transition-duration: $navbar-transition;
+			transition-delay: $navbar-transition-delay;
+			transition-timing-function: $navbar-transition-timing-function;
+			transform: translateY(0);
+		}//in
+
+	}//slide
+
+
+
+
+	// FADE
+	&.navbar-fade{
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+
+
+		&.in{
+			transition-duration: $navbar-transition;
+			transition-delay: $navbar-transition-delay;
+			transition-timing-function: $navbar-transition-timing-function;
+			visibility: visible;
+			opacity: 1;
+		}//in
+
+	}//fade
+
+
+
+
+
+}//navbar
+
+
+

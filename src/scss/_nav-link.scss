@@ -1,0 +1,19 @@
+/*---------------------------------------------------------*/
+/*	NAV LINK
+/*---------------------------------------------------------*/
+.navbar-nav .nav-link,
+.navbar .nav-justified .nav-link{
+	color: $nav-link-color;
+	line-height: $nav-link-line-height;
+	padding: $nav-link-spacer-y $nav-link-spacer-x;
+	display: block;
+	transition: $nav-link-transition;
+	cursor: pointer;
+
+
+	@include linkHover(
+		background $nav-link-hover-bg,
+		color $nav-link-hover-color
+	);
+
+}//nav-link

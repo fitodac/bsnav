@@ -1,0 +1,12 @@
+body{
+	color: #666;
+}
+
+
+a.card{
+	color: #666;
+
+	&:hover, &:active, &:focus, &:active:focus{
+		text-decoration: none;
+	}
+}//.card
