@@ -1,8 +1,10 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-lg
+	.navbar.navbar-expand-lg.bsnav
+
 		a.navbar-brand(href="#") Navbar
+
 		button.navbar-toggler
 			span.navbar-toggler-icon
 
@@ -22,10 +24,15 @@ block content
 
 
 	.jumbotron.jumbotron-fluid
+		.container
+			h1 Navbar left
 
 
 	style.
 		.jumbotron{
-			background: url('https://picsum.photos/1400/700?image=823') no-repeat center bottom / cover;
+			background: url('https://picsum.photos/1400/700?image=823') no-repeat center top / cover;
+			color: #fff;
 			height: 600px;
+			display: flex;
+			align-items: center;
 		}

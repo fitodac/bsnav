@@ -1,0 +1,205 @@
+@import 'variables';
+@import 'mixins';
+
+
+/*------------------------------------------------------------*/
+/*	NAVBAR
+/*------------------------------------------------------------*/
+.navbar{
+	border: none;
+	margin: 0;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: $navbar-spacer;
+  padding-right: $navbar-spacer;
+}//navbar
+
+
+// CONTAINER
+.navbar > .container,
+.navbar > .container-fluid{
+	display: flex;
+	flex-flow: row wrap;
+  align-items: center;
+  margin-left: -$navbar-spacer;
+  margin-right: -$navbar-spacer;
+}
+
+
+.navbar > .container-fluid{
+	width: 100%;
+}//navbar > container-fluid
+
+
+
+
+/*------------------------------------------------------------*/
+/*	NAVBAR HEADER
+/*------------------------------------------------------------*/
+.navbar-header{
+	float: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}//navbar-header
+
+
+// NAVBAR BRAND
+.navbar-brand{
+	line-height: 1;
+	padding: 0;
+	margin-right: 15px;
+	display: inline-block;
+	float: none;
+
+	> a{
+		width: inherit;
+		height: 100%;
+		display: inline-block;
+	}//a
+
+	img, svg{
+		width: 100%;
+		height: 100%;
+	}//img / svg
+
+}//navbar-brand
+
+
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand{
+	margin-left: 0;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	NAVBAR COLLAPSE
+/*------------------------------------------------------------*/
+.navbar-collapse{
+	padding: 0;
+	flex: 1 0 auto;
+}//navbar-collapse
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	NAVBAR DEFAULT
+/*------------------------------------------------------------*/
+.navbar-default{
+	background: $navbar-default-bg;
+	// border: solid 1px $navbar-default-border-color;
+
+	.navbar-nav .nav-link,
+	.nav-justified .nav-link{
+		color: $nav-default-link-color;
+
+		@include linkHover(
+			background $nav-default-link-hover-bg,
+			color $nav-default-link-hover-color
+		);
+
+	}//nav-link
+
+}//navbar-default
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	NAVBAR INVERSE
+/*------------------------------------------------------------*/
+.navbar-inverse{
+	background: $navbar-inverse-bg;
+	// border: solid 1px $navbar-inverse-border-color;
+
+	.navbar-nav .nav-link,
+	.nav-justified .nav-link{
+		color: $nav-inverse-link-color;
+
+		@include linkHover(
+			background $nav-inverse-link-hover-bg,
+			color $nav-inverse-link-hover-color
+		);
+
+	}//nav-link
+
+}//navbar-inverse
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	NAVBAR CENTER
+/*------------------------------------------------------------*/
+.navbar-center{
+	justify-content: center;
+
+	.navbar-collapse{
+		flex: none;
+	}//navbar-collapse
+}//navbar-center
+
+
+
+
+
+
+
+@import 'navbar-transparent';
+@import 'navbar-nav';
+@import 'nav-item';
+@import 'nav-link';
+@import 'nav-placement';
+@import 'nav-subnavbar';
+@import 'nav-topbar';
+
+
+
+
+
+
+
+
+
+
+.navbar-default .navbar-toggle,
+.navbar-toggle{
+	border: none;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M25.0907891,10 L7,10" id="line-top" stroke="#000000" stroke-width="2" stroke-linecap="round"></path><path d="M25.0907891,16 L7,16" id="line-middle" stroke="#000000" stroke-width="2" stroke-linecap="round"></path><path d="M25.0907891,22 L7,22" id="line-bottom" stroke="#000000" stroke-width="2" stroke-linecap="round"></path></svg>');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 0;
+	width: $nav-btn-width;
+	height: $nav-btn-height;
+	padding: 0;
+	margin: 0;
+	// display: block; // <-- Don't add this!!
+	transition: $nav-btn-transition;
+	border-radius: 0;
+
+	@include linkHover(background-color transparent);
+
+
+
+	&.white{
+		filter: invert(100%);
+	}//white
+
+}//navbar-toggle

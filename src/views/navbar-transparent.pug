@@ -1,7 +1,7 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-lg.bsnav.bsnav-brand-center
+	.navbar.navbar-expand-lg.bsnav.bsnav-transparent
 
 		a.navbar-brand(href="#") Navbar
 
@@ -9,19 +9,14 @@ block content
 			span.navbar-toggler-icon
 
 
-		.collapse.navbar-collapse.justify-content-md-between
-			ul.navbar-nav
+		.collapse.navbar-collapse.justify-content-md-end
+			ul.navbar-nav.mr-0
 				li.nav-item.active
 					a.nav-link(href="#") Home
 				li.nav-item
 					a.nav-link(href="#") About Us
 				li.nav-item
 					a.nav-link(href="#") News
-
-
-			ul.navbar-nav
-				li.nav-item
-					a.nav-link(href="#") Item
 				li.nav-item
 					a.nav-link(href="#") Gallery
 				li.nav-item
@@ -30,7 +25,7 @@ block content
 
 	.jumbotron.jumbotron-fluid
 		.container
-			h1 Navbar center brand
+			h1 Navbar transparent
 
 
 	style.

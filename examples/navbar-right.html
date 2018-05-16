@@ -6,10 +6,11 @@
     <meta meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>bsnav</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../dist/css/bsnav.min.css">
     <link rel="stylesheet" type="text/css" href="../examples.min.css">
   </head>
   <body>
-    <div class="navbar navbar-expand-lg"><a class="navbar-brand" href="#">Navbar</a>
+    <div class="navbar navbar-expand-lg bsnav"><a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse justify-content-md-end">
         <ul class="navbar-nav mr-0">
@@ -21,11 +22,18 @@
         </ul>
       </div>
     </div>
-    <div class="jumbotron jumbotron-fluid"></div>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Navbar right</h1>
+      </div>
+    </div>
     <style>
       .jumbotron{
-      	background: url('https://picsum.photos/1400/700?image=823') no-repeat center bottom / cover;
+      	background: url('https://picsum.photos/1400/700?image=823') no-repeat center top / cover;
+      	color: #fff;
       	height: 600px;
+      	display: flex;
+      	align-items: center;
       }
     </style>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
