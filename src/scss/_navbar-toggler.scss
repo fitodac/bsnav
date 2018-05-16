@@ -1,6 +1,9 @@
+/*------------------------------------------------------------*/
+/*	NAVBAR TOGGLER
+/*------------------------------------------------------------*/
 .navbar-toggler{
 	border: none;
-	width: 40px;
+	width: 34px;
 	height: 24px;
 	padding: 0;
 	position: relative;
@@ -10,38 +13,179 @@
 
 	.navbar-toggler-icon{
 		display: block;
-		top: 0;
+		top: 10px;
 	
 		&,
 		&::before,
 		&::after {
 			background-color: #999;
-			width: 40px;
+			width: 100%;
 			height: 4px;
+			display: block;
 			position: absolute;
-			border-radius: 4px;
+			border-radius: 100px;
 			transition-property: transform;
-			transition-duration: 0.15s;
+			transition-duration: .2s;
 			transition-timing-function: ease;
 		}
 	
 		&::before,
-		&::after {
+		&::after{
 			content: "";
 			display: block;
 		}
 	
-		&::before {
-			top: 10px;
-		}
-	
-		&::after {
-			top: 20px;
-		}
+		&::before{ top: -10px; }
+		&::after{ bottom: -10px; }
 
 		transition-property: opacity, filter;
 		transition-duration: .15s;
 		transition-timing-function: linear;
 	}//navbar-toggler-icon
+
+
+
+
+
+
+	/*------------------------------------------------------------*/
+	/*	SPIN
+	/*------------------------------------------------------------*/
+	&.toggler-spin{
+
+		.navbar-toggler-icon{
+			transition-duration: 0.22s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+      &::before {
+        transition: top 0.1s 0.25s ease-in,
+				opacity 0.1s ease-in;
+      }
+
+      &::after {
+        transition: bottom 0.1s 0.25s ease-in,
+				transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+		}//navbar-toggler-icon
+
+
+		&.active{
+      .navbar-toggler-icon{
+				transform: rotate(225deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &::before {
+          top: 0;
+          opacity: 0;
+          transition: top 0.1s ease-out,
+					opacity 0.1s 0.12s ease-out;
+        }
+
+        &::after {
+          bottom: 0;
+          transform: rotate(-90deg);
+          transition: bottom 0.1s ease-out,
+					transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+      }//navbar-toggler-icon
+    }//active
+
+	}//toggler-spin
+
+
+
+
+	/*------------------------------------------------------------*/
+	/*	ELASTIC
+	/*------------------------------------------------------------*/
+	&.toggler-elastic{
+
+		.navbar-toggler-icon{
+			top: 0;
+      transition-duration: 0.275s;
+      transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      &::before {
+        top: 10px;
+        transition: opacity 0.125s 0.275s ease;
+      }
+
+      &::after {
+        top: 20px;
+        transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+		}//navbar-toggler-icon
+
+
+		&.active{
+      .navbar-toggler-icon{
+				// $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
+        transform: translate3d(0, 10px, 0) rotate(135deg);
+        transition-delay: 0.075s;
+
+        &::before {
+          transition-delay: 0s;
+          opacity: 0;
+        }
+
+        &::after {
+          transform: translate3d(0, -20px, 0) rotate(-270deg);
+          transition-delay: 0.075s;
+        }
+      }//navbar-toggler-icon
+    }//active
+
+	}//toggler-elastic
+
+
+
+
+	/*------------------------------------------------------------*/
+	/*	SPRING
+	/*------------------------------------------------------------*/
+	&.toggler-spring{
+
+		.navbar-toggler-icon{
+			top: 0;
+      transition: background-color 0s 0.13s linear;
+
+      &::before {
+        top: 10px;
+        transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+				transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+
+      &::after {
+        top: 20px;
+        transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+				transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+		}//navbar-toggler-icon
+
+
+		&.active{
+      .navbar-toggler-icon{
+				transition-delay: 0.22s;
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: translate3d(0, 10px, 0) rotate(-45deg);
+        }
+      }//navbar-toggler-icon
+    }//active
+
+	}//toggler-spring
+
+
 
 }//navbar-toggler

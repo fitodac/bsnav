@@ -2,6 +2,10 @@ body{
 	color: #666;
 }
 
+*, *:focus{
+	outline: none !important;
+}
+
 
 a.card{
 	color: #666;

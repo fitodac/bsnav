@@ -13,21 +13,15 @@ var gulp 				= require('gulp'),
 
 // To compile js, just run 'gulp scripts' on console and be sure to have the right paths.
 gulp.task('scripts', function(){  
-	gulp.src('_nitro-js/src/*.js')
+	gulp.src('js/*.js')
 		// Compile
-		.pipe(concat('nitro.js'))
-		.pipe(gulp.dest('_nitro-js/'))
-		.pipe(gulp.dest('../dist/assets/js'))
-		.pipe(gulp.dest('../examples/assets/js'))
-		.pipe(gulp.dest('../doc/assets/js'))
+		.pipe(concat('bsnav.js'))
+		.pipe(gulp.dest('../dist/js'))
 		
 		// Minify
-		.pipe(rename('nitro.min.js'))
+		.pipe(rename('bsnav.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('_nitro-js/'))
-		.pipe(gulp.dest('../dist/assets/js'))
-		.pipe(gulp.dest('../examples/assets/js'))
-		.pipe(gulp.dest('../doc/assets/js'))
+		.pipe(gulp.dest('../dist/js'))
 
 		.pipe(notify({ message: 'Scripts are compiled!', onLast: true }));
 });
@@ -92,7 +86,7 @@ gulp.task('pug', function buildHTML() {
 // WATCH
 gulp.task('watch', function(cb){
 	gulp.watch('views/*.pug', ['pug']);
-	// gulp.watch('views/**/*.js', ['scripts']);
+	gulp.watch('js/**/*.js', ['scripts']);
 	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('scss-example/**/*.scss', ['sass-example']);
 	return cb();

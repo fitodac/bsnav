@@ -1,2 +1,2 @@
-a.card,body{color:#666}a.card:active,a.card:active:focus,a.card:focus,a.card:hover{text-decoration:none}
+a.card,body{color:#666}*,:focus{outline:0!important}a.card:active,a.card:active:focus,a.card:focus,a.card:hover{text-decoration:none}
 /*# sourceMappingURL=examples.min.css.map */
