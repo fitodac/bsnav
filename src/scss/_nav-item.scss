@@ -1,12 +1,10 @@
 /*---------------------------------------------------------*/
 /*	NAV ITEM
 /*---------------------------------------------------------*/
-.navbar-nav .nav-item,
-.navbar .nav-justified .nav-item{
-	font-family: $nav-item-font;
-	font-size: $nav-item-font-size;
-	font-weight: $nav-item-font-weight;
+.navbar-nav .nav-item{
+	color: #000;
+
 	// Font smoothing
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
 }//nav-item

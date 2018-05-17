@@ -1,6 +1,25 @@
 /*------------------------------------------------------------*/
 /*	BSNAV
 /*------------------------------------------------------------*/
+
+// LINKHOVER
+@mixin linkHover($params...){
+
+  &:hover, &:hover:active, &:active, &:focus{
+
+		@each $style in $params{
+			$rule: nth($style,1);
+			$val: nth($style,2);
+			#{$rule}: $val;
+		}
+
+	}//:hover, :active, :focus
+
+}
+
+
+
+
 @import 'navbar-brand';
 @import 'navbar-toggler';
 
@@ -13,6 +32,9 @@
 @import 'bg-transparent';
 @import 'bg-light';
 @import 'bg-overlay';
+
+@import 'nav-item';
+@import 'nav-link';
 
 @import 'brand-center';
 @import 'brand-top';
