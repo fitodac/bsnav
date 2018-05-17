@@ -1,6 +1,13 @@
-/*------------------------------------------------------------*/
-/*	BSNAV
-/*------------------------------------------------------------*/
+/* ==============================================================
+
+Template name : BSNAV - advanced Bootstrap 4 menu
+Categorie : Bootstrap Menu in CSS
+Author : @fitodac
+Version : v.0.1
+Created : May 2018
+Last update : May 2018
+
+============================================================== */
 
 // LINKHOVER
 @mixin linkHover($params...){
@@ -35,6 +42,8 @@
 
 @import 'nav-item';
 @import 'nav-link';
+@import 'caret';
+@import 'submenu';
 
 @import 'brand-center';
 @import 'brand-top';
