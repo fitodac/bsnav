@@ -9,4 +9,13 @@
 		color: #fff;
 	}//nav-item
 
+	
+	.navbar-toggler .navbar-toggler-icon{
+		&,
+		&::before,
+		&::after{
+			background-color: #fff;
+		}
+	}//.navbar-toggler
+
 }//bsnav

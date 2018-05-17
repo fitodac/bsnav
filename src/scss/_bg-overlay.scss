@@ -2,18 +2,33 @@
 /*	NAVBAR OVERLAY
 /*------------------------------------------------------------*/
 .bsnav-overlay{
-	background: rgba(#000,.5);
+	background: rgba(#000,.3);
 	border-bottom: solid 1px rgba(#fff,.3);
 	left: 0;
 	right: 0;
 	position: absolute;
+
+
+	.navbar-nav .nav-item{
+		color: #fff;
+	}//nav-item
+
+
+	.navbar-toggler .navbar-toggler-icon{
+		&,
+		&::before,
+		&::after{
+			background-color: #fff;
+		}
+	}//.navbar-toggler
+
 }//bsnav-overlay
 
 
 
 .bsnav-overlay-light{
-	background: rgba(#fff,.5);
-	border-bottom: solid 1px rgba(#fff,.6);
+	background: rgba(#fff,.8);
+	border-bottom: solid 1px #fff;
 	left: 0;
 	right: 0;
 	position: absolute;
