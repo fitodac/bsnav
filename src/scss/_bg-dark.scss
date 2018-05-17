@@ -18,4 +18,16 @@
 		}
 	}//.navbar-toggler
 
+
+
+	.nav-item .caret{
+		border-top-color: #fff;
+	}//caret
+
+
+
+	.nav-item.dropdown > .navbar-nav{
+		background: #000;
+	}//navbar-nav
+
 }//bsnav
