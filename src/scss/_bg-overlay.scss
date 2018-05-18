@@ -2,7 +2,10 @@
 /*	NAVBAR OVERLAY
 /*------------------------------------------------------------*/
 .bsnav-overlay{
-	background: rgba(#000,.3);
+
+	$overlay-bg: rgba(#000,.3);
+ 
+	background: $overlay-bg;
 	border-bottom: solid 1px rgba(#fff,.3);
 	left: 0;
 	right: 0;
@@ -22,14 +25,60 @@
 		}
 	}//.navbar-toggler
 
+
+
+	.nav-item .caret{
+		border-top-color: #fff;
+	}//caret
+
+	.nav-item.dropdown .navbar-nav .nav-link .caret,
+	.nav-item.dropdown.dropdown-right .navbar-nav .nav-link .caret{
+		border-left-color: #fff;
+		border-right-color: #fff;
+	}
+
+
+
+
+	.nav-item.dropdown > .navbar-nav{
+		background: $overlay-bg;
+
+
+		.navbar-nav{
+			background: $overlay-bg;
+		}//navbar-nav
+
+	}//dropdown > navbar-nav
+
+
 }//bsnav-overlay
 
 
 
+
+
+
+
+
 .bsnav-overlay-light{
-	background: rgba(#fff,.8);
+
+	$overlay-bg: rgba(#fff,.8);
+
+	background: $overlay-bg;
 	border-bottom: solid 1px #fff;
 	left: 0;
 	right: 0;
 	position: absolute;
+
+
+	.nav-item.dropdown > .navbar-nav{
+		background: $overlay-bg;
+
+
+		.navbar-nav{
+			background: $overlay-bg;
+		}//navbar-nav
+
+	}//dropdown > navbar-nav
+
 }//bsnav-overlay-light

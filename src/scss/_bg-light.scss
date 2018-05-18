@@ -21,4 +21,54 @@
 		}
 	}//.navbar-toggler
 
+
+
+
+	.nav-item .caret{
+		border-top-color: #fff;
+	}//caret
+
+
+
+
+	$navbar-radius: 4px;
+	$navbar-shadow: 0 2px 14px rgba(#000,.15);
+	$navbar-margin: 3px;
+
+
+	.nav-item.dropdown{
+
+		> .navbar-nav{
+			background: #fff;
+			border-radius: $navbar-radius;
+			box-shadow: $navbar-shadow;
+
+
+			.navbar-nav{
+				background: #fff;
+				margin-left: $navbar-margin;
+				border-radius: $navbar-radius;
+				box-shadow: $navbar-shadow;
+			}//navbar-nav
+
+		}//dropdown > navbar-nav
+
+
+		&.dropdown-right{
+
+			> .navbar-nav .navbar-nav{
+				margin-left: 0;
+				margin-right: $navbar-margin;
+			}//navbar-nav
+
+		}//dropdown-right
+
+
+		.nav-item{
+			color: #000;
+		}//nav-item
+	
+	}//dropdown
+
+
 }//bsnav-light
