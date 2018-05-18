@@ -30,6 +30,8 @@ $submenu-width: 200px;
 
 
 	.nav-item{
+		font-size: 0.9rem;
+		line-height: 1.2;
 		position: relative;
 
 
@@ -80,21 +82,6 @@ $submenu-width: 200px;
 
 
 
-// .nav-item.dropdown.pop:hover{
-
-// 	.nav-subnavbar{
-// 		display: block;
-
-// 		.nav-item{
-
-// 		}//nav-item
-
-// 	}//nav-subnavbar
-
-// }//dropdown
-
-
-
 
 
 
@@ -121,45 +108,6 @@ $submenu-width: 200px;
 	}//navbar-nav
 
 }//dropdown.fade
-
-// .nav-item.dropdown.fade{
-// 	opacity: 1;
-
-// 	.nav-subnavbar{
-// 		display: block;
-// 		opacity: 0;
-// 		visibility: hidden;
-// 		transition: $subnavbar-transition ease-in-out;
-// 		pointer-events: none;
-
-// 		&.in{
-// 			opacity: 1;
-// 			visibility: visible;
-// 			pointer-events: initial;
-// 		}
-
-// 		.nav-item{
-// 			transform: translateY(0);
-// 		}//nav-item
-// 	}//nav-subnavbar
-
-// }//dropdown.fade
-
-
-
-// .nav-item.dropdown.fade:hover{
-
-// 	.nav-subnavbar{
-// 		opacity: 1;
-// 		visibility: visible;
-
-// 		.nav-item{
-// 			transform: translateY(0);
-// 		}//nav-item
-
-// 	}//nav-subnavbar
-
-// }//dropdown
 
 
 
@@ -192,50 +140,6 @@ $submenu-width: 200px;
 }//dropdown.fadeup
 
 
-// .nav-item.dropdown.fade-up{
-// 	opacity: 1;
-
-// 	.nav-subnavbar{
-// 		display: block;
-// 		opacity: 0;
-// 		visibility: hidden;
-// 		transition: $subnavbar-transition/1.5 ease-in-out;
-// 		transform: translateY(50px);
-// 		pointer-events: none;
-
-
-// 		&.in{
-// 			opacity: 1;
-// 			visibility: visible;
-// 			pointer-events: initial;
-// 		}
-
-// 		.nav-item{
-// 			transform: translateY(0);
-// 		}//nav-item
-// 	}//nav-subnavbar
-
-// }//dropdown.fade-up
-
-
-
-// .nav-item.dropdown.fade-up:hover{
-
-// 	.nav-subnavbar{
-// 		opacity: 1;
-// 		visibility: visible;
-// 		transform: translateY(0);
-
-// 		.nav-item{
-// 			transform: translateY(0);
-// 		}//nav-item
-
-// 	}//nav-subnavbar
-
-// }//dropdown
-
-
-
 
 
 
@@ -263,49 +167,6 @@ $submenu-width: 200px;
 	}//navbar-nav
 
 }//dropdown.zoom
-
-
-// .nav-item.dropdown.zoom{
-
-// 	.nav-subnavbar{
-// 		display: block;
-// 		opacity: 0;
-// 		visibility: hidden;
-// 		transition: $subnavbar-transition ease-in-out;
-// 		transform: scale($subnavbar-scale);
-// 		pointer-events: none;
-
-
-// 		&.in{
-// 			opacity: 1;
-// 			visibility: visible;
-// 			pointer-events: initial;
-// 		}
-
-
-// 		.nav-item{
-// 			transform: translateY(0);
-// 		}//nav-item
-// 	}//nav-subnavbar
-
-// }//dropdown.zoom
-
-
-
-// .nav-item.dropdown.zoom:hover{
-
-// 	.nav-subnavbar{
-// 		opacity: 1;
-// 		visibility: visible;
-// 		transform: scale(1);
-
-// 		.nav-item{
-// 			transform: translateY(0);
-// 		}//nav-item
-
-// 	}//nav-subnavbar
-
-// }//dropdown
 
 
 

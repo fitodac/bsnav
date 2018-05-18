@@ -24,10 +24,18 @@
 		border-top-color: #fff;
 	}//caret
 
+	.nav-item.dropdown .navbar-nav .nav-link .caret{
+		border-left-color: #fff;
+	}
+
 
 
 	.nav-item.dropdown > .navbar-nav{
 		background: #000;
+
+		.navbar-nav{
+			background: #000;
+		}
 	}//navbar-nav
 
 }//bsnav
