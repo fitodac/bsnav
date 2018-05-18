@@ -1,7 +1,7 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-lg.bsnav.bsnav-dark
+	.navbar.navbar-expand-lg.bsnav.bsnav-transparent
 
 		a.navbar-brand(href="#") Navbar
 
@@ -14,7 +14,7 @@ block content
 				li.nav-item.active
 					a.nav-link(href="#") Home
 				
-				li.nav-item.dropdown.pop
+				li.nav-item.dropdown
 					a.nav-link(href="#") Has children! #[i.caret]
 
 					ul.navbar-nav
@@ -42,8 +42,24 @@ block content
 							a.nav-link(href="#") Other action
 
 
-				li.nav-item
-					a.nav-link(href="#") About Us
+				li.nav-item.dropdown
+					a.nav-link(href="#") Styles #[i.caret]
+
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link(href="submenu-dropdown.html") Default
+						li.nav-item
+							a.nav-link(href="submenu-dropdown-dark.html") Dark
+						li.nav-item
+							a.nav-link(href="submenu-dropdown-transparent.html") Transparent
+						li.nav-item
+							a.nav-link(href="submenu-dropdown-light.html") Light
+						li.nav-item
+							a.nav-link(href="submenu-dropdown-overlay.html") Overlay
+						li.nav-item
+							a.nav-link(href="submenu-dropdown-overlay-light.html") Overlay Light
+
+
 				li.nav-item
 					a.nav-link(href="#") News
 				li.nav-item
@@ -52,7 +68,7 @@ block content
 					a.nav-link(href="#") Contact
 
 
-				li.nav-item.dropdown.dropdown-right.pop
+				li.nav-item.dropdown.dropdown-right
 					a.nav-link(href="#") Submenu at right #[i.caret]
 
 					ul.navbar-nav
@@ -82,7 +98,7 @@ block content
 
 	.jumbotron.jumbotron-fluid
 		.container
-			h1 Submenu pop
+			h1 Submenu dropdown
 
 
 	style.

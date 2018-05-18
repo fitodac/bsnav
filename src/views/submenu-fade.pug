@@ -52,14 +52,30 @@ block content
 					a.nav-link(href="#") Contact
 
 
-				li.nav-item.dropdown.fade
+				li.nav-item.dropdown.dropdown-right.fade
 					a.nav-link(href="#") Submenu at right #[i.caret]
 
 					ul.navbar-nav
 						li.nav-item
 							a.nav-link(href="#") Action
 						li.nav-item
-							a.nav-link(href="#") Levels #[i.caret]
+							a.nav-link(href="#") #[i.caret] Levels
+
+							ul.navbar-nav
+								li.nav-item
+									a.nav-link(href="#") Action
+								li.nav-item
+									a.nav-link(href="#") #[i.caret] Levels
+
+									ul.navbar-nav
+										li.nav-item
+											a.nav-link(href="#") Action
+										li.nav-item
+											a.nav-link(href="#") Other action
+
+								li.nav-item
+									a.nav-link(href="#") Other action
+
 						li.nav-item
 							a.nav-link(href="#") Other action
 

@@ -20,13 +20,20 @@
 
 
 
+
+
 	.nav-item .caret{
 		border-top-color: #fff;
 	}//caret
 
-	.nav-item.dropdown .navbar-nav .nav-link .caret{
+	.nav-item.dropdown .navbar-nav .nav-link .caret,
+	.nav-item.dropdown.dropdown-right .navbar-nav .nav-link .caret{
 		border-left-color: #fff;
+		border-right-color: #fff;
 	}
+	
+
+
 
 
 

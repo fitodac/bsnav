@@ -1,14 +1,16 @@
 /*------------------------------------------------------------*/
 /*	CARET
 /*------------------------------------------------------------*/
+$size: 5px;
+
 .nav-item .caret{
 	width: 0;
 	height: 0;
 	margin-left: 5px;
 	border: none;
-	border-left: solid 5px transparent;
-	border-right: solid 5px transparent;
-	border-top: solid 6px #444;
+	border-left: solid $size - 1 transparent;
+	border-right: solid $size - 1 transparent;
+	border-top: solid $size #444;
 	vertical-align: middle;
 	display: inline-block;
 }//caret
@@ -19,17 +21,17 @@
 
 	.navbar-nav .nav-link .caret{
 		border: none;
-		border-top: solid 5px transparent;
-		border-bottom: solid 5px transparent;
-		border-left: solid 6px #444;
+		border-top: solid $size - 1 transparent;
+		border-bottom: solid $size - 1 transparent;
+		border-left: solid $size #444;
 	}//caret
 
 
 	&.dropdown-right .navbar-nav .nav-link .caret{
 		border: none;
-		border-top: solid 5px transparent;
-		border-bottom: solid 5px transparent;
-		border-right: solid 6px #444;
+		border-top: solid $size - 1 transparent;
+		border-bottom: solid $size - 1 transparent;
+		border-right: solid $size #444;
 		margin-left: 0;
 		margin-right: 5px;
 	}//caret at right
