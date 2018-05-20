@@ -1,0 +1,49 @@
+/*------------------------------------------------------------*/
+/*	HORIZONTAL DROPDOWN
+/*------------------------------------------------------------*/
+.dropdown.dropdown-horizontal{
+	position: initial;
+
+
+	> .navbar-nav,
+	> .navbar-nav .navbar-nav{
+		width: auto;
+		left: 0;
+		right: 0;
+		top: 100%;
+		transition: .6s;
+		flex-direction: row;
+		justify-content: flex-end;
+		box-shadow: 0 1px 0 rgba(#000,.1) inset;
+		clip: rect(0, 100vw, 0, 0);
+
+
+		&.in,
+		.nav-item:hover > .navbar-nav{
+			clip: rect(0, 100vw, 50vh, 0);
+		}//navbar-nav
+
+
+		.nav-item{
+			display: inline-block;
+			position: initial;
+	
+			.nav-link{
+				padding: 20px 10px;
+
+
+				.caret{
+					$size: 5px;
+
+					border-left: solid $size - 1 transparent;
+					border-right: solid $size - 1 transparent;
+					border-top: solid $size #444;
+				}//caret
+
+			}//nav-item
+	
+		}//nav-item
+
+	}//navbar-nav
+
+}//dropdown-horizontal

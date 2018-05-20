@@ -10,11 +10,15 @@
 			this.event();
 			this.toggler();
 			this.dropdown();
+			this.mobileMenu();
 			// this.navbarSticky();
 			// this.navbarScrollspy();
 		},
 
+
+
 		event : function(){},
+
 
 
 		toggler : function(){
@@ -29,37 +33,39 @@
 		},
 
 
-		dropdown: function(){
 
-			var _speed = 300;
+		dropdown: function(){
 
 			$('.bsnav .nav-item.dropdown')
 			.on('mouseenter', function(){
-
-				var _el = $(this);
-
-				if( _el.hasClass('pop') || _el.hasClass('fade') || _el.hasClass('fadeup') || _el.hasClass('zoom') ){
-					_el.find('> .navbar-nav').addClass('in');
-				}else{
-					_el.find('> .navbar-nav').addClass('in').stop().slideDown(_speed);
-				}
-
+				$(this).find('> .navbar-nav').addClass('in');
 			})
 			.on('mouseleave', function(){
-
-				var _el = $(this);
-
-				if( _el.hasClass('pop') || _el.hasClass('fade') || _el.hasClass('fadeup') || _el.hasClass('zoom') ){
-					_el.find('> .navbar-nav').removeClass('in');
-				}else{
-					_el.find('> .navbar-nav').removeClass('in').stop().slideUp(_speed);
-				}
-
+				$(this).find('> .navbar-nav').removeClass('in');
 			});
 
-		}
+		},
+
+
+
+		mobileMenu: function(){
+
+			var _menu = $('<div/>', {
+						class: 'bsnav-mobile',
+						html: '<div class="bsnav-mobile-overlay"></div><div class="navbar"></div>'
+					});
+
+			$('.bsnav .collapse').find('> .navbar-nav').each(function(){
+				_menu.find('.navbar').append( $(this).clone() );
+			});
+
+			_menu.appendTo('body');
+
+		},
 
 	};
+
+
 
 
 	// Initialize

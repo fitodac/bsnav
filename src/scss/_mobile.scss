@@ -1,0 +1,43 @@
+.bsnav-mobile{
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	z-index: 50;
+
+
+	.bsnav-mobile-overlay{
+		background: rgba(#000,.3);
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: fixed;
+	}//bsnav-mobile-overlay
+
+
+	.navbar{
+		background: #fff;
+		width: 300px;
+		padding: 70px 15px 15px;
+		flex-flow: column;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+	}//navbar
+
+
+	.navbar-nav{
+		width: 100%;
+
+		.nav-item{
+			.nav-link{
+				
+			}//nav-link
+		}//nav-item
+	}//navbar-nav
+
+
+}//bsnav-mobile

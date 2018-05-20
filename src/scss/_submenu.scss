@@ -8,12 +8,15 @@ $submenu-width: 200px;
 	background: #fff;
 	width: $submenu-width;
 	position: absolute;
-	display: none;
 	pointer-events: none;
+	flex-direction: column;
+	transition: .3s;
+	clip: rect(0, 100vw, 0, 0);
 
 
 	&.in{
 		pointer-events: initial;
+		clip: rect(0, 50vw, 100vh, 0);
 	}
 
 
@@ -40,13 +43,6 @@ $submenu-width: 200px;
 		}//nav-link
 
 
-		// .nav-link:hover,
-		// .nav-link:active,
-		// .nav-link:focus{
-			// background: red;
-		// }//hover
-
-
 		&:hover > .navbar-nav{
 			clip: rect(0, 100vw, 100vh, 0);
 		}//navbar-nav
@@ -64,7 +60,11 @@ $submenu-width: 200px;
 
 
 
-// RIGHT DROPDOWN
+
+
+/*------------------------------------------------------------*/
+/*	RIGHT DROPDOWN
+/*------------------------------------------------------------*/
 .nav-item.dropdown.dropdown-right{
 
 	> .navbar-nav{
@@ -85,202 +85,11 @@ $submenu-width: 200px;
 	
 		}//nav-item
 
+
+		&.in{
+			clip: rect(0, 100vw, 100vh, -100vw);
+		}
+
 	}//navbar-nav
 
 }//dropdown-right
-
-
-
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	POP
-/*------------------------------------------------------------*/
-.nav-item.dropdown.pop > .navbar-nav{
-
-	&.in{
-		display: block;
-	}//in
-
-}//pop
-
-
-
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	FADE
-/*------------------------------------------------------------*/
-.nav-item.dropdown.fade{
-	opacity: 1;
-
-	> .navbar-nav{
-		opacity: 0;
-		visibility: hidden;
-		display: block;
-		transition: .3s;
-
-		&.in{
-			opacity: 1;
-			visibility: visible;
-		}//in
-
-	}//navbar-nav
-
-}//dropdown.fade
-
-
-
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	FADE UP
-/*------------------------------------------------------------*/
-.nav-item.dropdown.fadeup{
-
-	> .navbar-nav{
-		margin-top: 30px;
-		opacity: 0;
-		visibility: hidden;
-		display: block;
-		transition: .3s;
-
-		&.in{
-			margin-top: 0;
-			opacity: 1;
-			visibility: visible;
-		}//in
-
-	}//navbar-nav
-
-}//dropdown.fadeup
-
-
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	ZOOM
-/*------------------------------------------------------------*/
-.nav-item.dropdown.zoom{
-
-	> .navbar-nav{
-		opacity: 0;
-		visibility: hidden;
-		display: block;
-		transform: scale(1.1);
-		transition: .3s;
-
-		&.in{
-			opacity: 1;
-			visibility: visible;
-			transform: scale(1);
-		}//in
-
-	}//navbar-nav
-
-}//dropdown.zoom
-
-
-
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	RIGHT ALIGN
-/*------------------------------------------------------------*/
-.nav-item.dropdown.dropdown-right > .navbar-nav{
-	right: 0;
-}//dropdown-right > .navbar-nav
-
-
-
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	SUB NAVBAR LEVELS
-/*------------------------------------------------------------*/
-// .nav-item.dropdown .nav-subnavbar .nav-subnavbar{
-// 	min-width: $subnavbar-min-width;
-// 	left: 100%;
-// 	top: 0;
-// 	position: absolute;
-// 	visibility: hidden;
-// 	opacity: 0;
-// 	transition: $subnavbar-transition;
-// }//.nav-subnavbar .nav-subnavbar
-
-
-// .nav-item.dropdown .nav-subnavbar .nav-item:hover > .nav-subnavbar{
-// 	visibility: visible;
-// 	opacity: 1;
-// }
-
-
-
-// // Right aligned
-// .nav-item.dropdown .nav-subnavbar.align-right .nav-subnavbar{
-// 	left: auto;
-// 	right: 100%;
-// }
-
-
-
-
-
-
-/*------------------------------------------------------------*/
-/*	DROPDOWN HORIZONTAL
-/*------------------------------------------------------------*/
-// .nav-item.dropdown.dropdown-horizontal{
-// 	position: initial;
-
-// 	> .nav-subnavbar{
-// 		background: $navbar-default-bg;
-// 		border-top: solid 1px #ddd;
-// 		width: 100%;
-// 		left: 0;
-// 		transition: $subnavbar-transition $subnavbar-transition-timing-function $subnavbar-transition-delay;
-// 		opacity: 0;
-// 		// transform: translateY(-600%);
-
-// 		.nav-item{
-// 			float: left;
-// 			transform: translateY(0);
-// 		}
-
-// 	}// nav-subnavbar
-
-
-
-// 	&:hover{
-
-// 		> .nav-subnavbar{
-// 			opacity: 1;
-// 		}// nav-subnavbar
-
-// 	}//:hover
-
-// }//dropdown-horizontal

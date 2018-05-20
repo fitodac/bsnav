@@ -1,0 +1,87 @@
+extends templates/_template.pug
+
+block content
+	.navbar.navbar-expand-lg.bsnav.bsnav-light
+
+		a.navbar-brand(href="#") Navbar
+
+		button.navbar-toggler.toggler-spring
+			span.navbar-toggler-icon
+
+
+		.collapse.navbar-collapse.justify-content-md-end
+			ul.navbar-nav.mr-0
+				li.nav-item.active
+					a.nav-link(href="#") Home
+				
+				li.nav-item.dropdown.dropdown-horizontal
+					a.nav-link(href="#") Horizontal Submenu #[i.caret]
+
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link(href="#") About Us
+						li.nav-item
+							a.nav-link(href="#") Levels #[i.caret]
+
+							ul.navbar-nav
+								li.nav-item
+									a.nav-link(href="#") Action
+								li.nav-item
+									a.nav-link(href="#") Other action
+								li.nav-item
+									a.nav-link(href="#") Levels #[i.caret]
+
+									ul.navbar-nav
+										li.nav-item
+											a.nav-link(href="#") Action
+										li.nav-item
+											a.nav-link(href="#") Other action
+
+						li.nav-item
+							a.nav-link(href="#") Services
+						li.nav-item
+							a.nav-link(href="#") Team
+						li.nav-item
+							a.nav-link(href="#") Other Action
+
+
+
+				li.nav-item.dropdown.dropdown-horizontal
+					a.nav-link(href="#") Styles #[i.caret]
+
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link(href="submenu-horizontal-dark.html") Default
+						li.nav-item
+							a.nav-link(href="submenu-horizontal-dark.html") Dark
+						li.nav-item
+							a.nav-link(href="submenu-horizontal-transparent.html") Transparent
+						li.nav-item
+							a.nav-link(href="submenu-horizontal-light.html") Light
+						li.nav-item
+							a.nav-link(href="submenu-horizontal-overlay.html") Overlay
+						li.nav-item
+							a.nav-link(href="submenu-horizontal-overlay-light.html") Overlay Light
+
+
+
+				li.nav-item
+					a.nav-link(href="#") Gallery
+				li.nav-item
+					a.nav-link(href="#") Contact
+
+
+
+	.jumbotron.jumbotron-fluid
+		.container
+			h1 Submenu horizontal
+
+
+	style.
+		.jumbotron{
+			background: url('https://picsum.photos/1400/700?image=823') no-repeat center top / cover;
+			color: #fff;
+			height: 600px;
+			display: flex;
+			align-items: center;
+		}

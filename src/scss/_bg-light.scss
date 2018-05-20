@@ -71,4 +71,22 @@
 	}//dropdown
 
 
+
+
+	.nav-item.dropdown.dropdown-horizontal{
+
+		> .navbar-nav{
+			left: 15px;
+			right: 15px;
+
+
+			&.in .navbar-nav{
+				margin-left: 0;
+			}//navbar-nav
+
+		}//navbar-nav
+
+	}//dropdown-horizontal
+
+
 }//bsnav-light

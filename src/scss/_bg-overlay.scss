@@ -3,7 +3,7 @@
 /*------------------------------------------------------------*/
 .bsnav-overlay{
 
-	$overlay-bg: rgba(#000,.3);
+	$overlay-bg: rgba(#000,.4);
  
 	background: $overlay-bg;
 	border-bottom: solid 1px rgba(#fff,.3);
@@ -37,6 +37,13 @@
 		border-right-color: #fff;
 	}
 
+	.nav-item.dropdown.dropdown-horizontal > .navbar-nav .nav-link .caret,
+	.nav-item.dropdown.dropdown-horizontal > .navbar-nav .navbar-nav .nav-link .caret{
+		border-top-color: #fff;
+		top: 2px;
+		position: relative;
+	}
+
 
 
 
@@ -47,6 +54,10 @@
 		.navbar-nav{
 			background: $overlay-bg;
 		}//navbar-nav
+
+		&:not(.in){
+			transition: clip 0s;
+		}
 
 	}//dropdown > navbar-nav
 
@@ -80,5 +91,20 @@
 		}//navbar-nav
 
 	}//dropdown > navbar-nav
+
+
+
+	.dropdown.dropdown-horizontal{
+
+		> .navbar-nav,
+		> .navbar-nav .navbar-nav{
+			box-shadow: 0 1px 0 #fff inset;
+		}
+
+		> .navbar-nav:not(.in){
+			transition: clip 0s;
+		}
+
+	}//dropdown-horizontal
 
 }//bsnav-overlay-light

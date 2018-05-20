@@ -1,0 +1,119 @@
+/*------------------------------------------------------------*/
+/*	POP
+/*------------------------------------------------------------*/
+.nav-item.dropdown.pop{ 
+	
+	> .navbar-nav{
+		display: none;
+		clip: initial;
+
+		&.in{
+			display: block;
+		}//in
+
+	}//navbar-nav
+
+}//pop
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	FADE
+/*------------------------------------------------------------*/
+.nav-item.dropdown.fade{
+	opacity: 1;
+
+	> .navbar-nav{
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+		transition: .3s;
+
+		&.in{
+			opacity: 1;
+			visibility: visible;
+		}//in
+
+	}//navbar-nav
+
+}//dropdown.fade
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	FADE UP
+/*------------------------------------------------------------*/
+.nav-item.dropdown.fadeup{
+
+	> .navbar-nav{
+		margin-top: 30px;
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+		transition: .3s;
+
+		&.in{
+			margin-top: 0;
+			opacity: 1;
+			visibility: visible;
+		}//in
+
+	}//navbar-nav
+
+}//dropdown.fadeup
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	ZOOM
+/*------------------------------------------------------------*/
+.nav-item.dropdown.zoom{
+
+	> .navbar-nav{
+		opacity: 0;
+		visibility: hidden;
+		display: block;
+		transform: scale(1.1);
+		transition: .3s;
+
+		&.in{
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1);
+		}//in
+
+	}//navbar-nav
+
+}//dropdown.zoom
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------*/
+/*	RIGHT ALIGN
+/*------------------------------------------------------------*/
+.nav-item.dropdown.dropdown-right > .navbar-nav{
+	right: 0;
+}//dropdown-right > .navbar-nav
