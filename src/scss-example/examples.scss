@@ -22,9 +22,17 @@ a.card{
 	font-size: 0;
 	width: 110px;
 	height: 28px;
-	margin: 18px 0;
+	margin: 18px 15px 18px 0;
 	opacity: .6;
 }//navbar-brand
+
+
+.bsnav-brand-top .navbar-brand{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
 
 .bsnav-light .navbar-brand,
 .bsnav-overlay .navbar-brand,
@@ -38,3 +46,15 @@ a.card{
 .bsnav-overlay .navbar-brand{
 	background: url('images/brand-white.png') no-repeat center / cover;
 }//navbar-brand
+
+
+.span{
+	background: #eeeeee;
+	color: #999;
+	font-size: .9rem;
+	font-weight: 500;
+	line-height: 1;
+	width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+}//span

@@ -1,7 +1,7 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-lg.bsnav.bsnav-brand-center
+	.navbar.navbar-expand-md.bsnav.bsnav-brand-center
 
 		a.navbar-brand(href="#") Navbar
 
@@ -10,7 +10,7 @@ block content
 
 
 		.collapse.navbar-collapse.justify-content-md-between
-			ul.navbar-nav
+			ul.navbar-nav.navbar-mobile
 				li.nav-item.active
 					a.nav-link(href="#") Home
 				li.nav-item
@@ -19,7 +19,7 @@ block content
 					a.nav-link(href="#") News
 
 
-			ul.navbar-nav
+			ul.navbar-nav.navbar-mobile
 				li.nav-item
 					a.nav-link(href="#") Item
 				li.nav-item
@@ -31,6 +31,13 @@ block content
 	.jumbotron.jumbotron-fluid
 		.container
 			h1 Navbar center brand
+	
+
+
+	.bsnav-mobile
+		.bsnav-mobile-overlay
+		.navbar
+
 
 
 	style.

@@ -5,4 +5,96 @@
 .bsnav-brand-top{
 	padding-top: 20px;
 	flex-flow: column;
+
+
+	.navbar-brand{
+		margin-left: 0;
+		margin-right: 0;
+	}//navbar-brand
+
 }//bsnav-brand-top
+
+
+
+
+
+@mixin navbar-brand-responsive{
+	.navbar-brand{
+		position: relative;
+		left: 50%;
+		transform: translate3d(-50%,0,0);
+	}
+}//navbar-brand-responsive
+
+
+
+
+
+.bsnav-brand-top.navbar-expand-xs{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	flex-flow: row wrap;
+
+	@include navbar-brand-responsive;
+
+}//navbar.navbar-expand-md
+
+
+
+
+
+@media (max-width: 576px) {
+
+	.bsnav-brand-top.navbar-expand-sm{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		flex-flow: row wrap;
+
+		@include navbar-brand-responsive;
+
+	}//navbar.navbar-expand-md
+
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+	.bsnav-brand-top.navbar-expand-md{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		flex-flow: row wrap;
+
+		@include navbar-brand-responsive;
+
+	}//navbar.navbar-expand-md
+
+}
+
+@media (max-width: 768px) and (min-width: 768px) {
+	.bsnav-brand-top.navbar-expand-md{
+		padding-top: 20px;
+		padding-bottom: 0;
+		flex-flow: column;
+	}
+}
+
+
+
+
+@media (max-width: 992px) {
+
+	.bsnav-brand-top.navbar-expand-lg{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		flex-flow: row wrap;
+
+		@include navbar-brand-responsive;
+
+	}//navbar.navbar-expand-md
+
+}

@@ -16,7 +16,7 @@ $submenu-width: 200px;
 
 	&.in{
 		pointer-events: initial;
-		clip: rect(0, 50vw, 100vh, 0);
+		clip: rect(0, 50vw, 2000px, 0);
 	}
 
 
@@ -28,7 +28,7 @@ $submenu-width: 200px;
 		left: 100%;
 		position: absolute;
 		transition: 1s;
-		clip: rect(0, 0, 100vh, 0);
+		clip: rect(0, 0, 2000px, 0);
 	}//navbar-nav
 
 
@@ -44,7 +44,7 @@ $submenu-width: 200px;
 
 
 		&:hover > .navbar-nav{
-			clip: rect(0, 100vw, 100vh, 0);
+			clip: rect(0, 100vw, 2000px, 0);
 		}//navbar-nav
 
 

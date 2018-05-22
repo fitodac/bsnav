@@ -4,29 +4,35 @@
 	bottom: 0;
 	right: 0;
 	position: fixed;
-	z-index: 50;
+	z-index: 49;
+	pointer-events: none;
 
 
 	.bsnav-mobile-overlay{
-		background: rgba(#000,.3);
+		// background: rgba(#000,.3);
 		top: 0;
 		left: 0;
 		bottom: 0;
 		right: 0;
 		position: fixed;
+		visibility: hidden;
+		pointer-events: none;
 	}//bsnav-mobile-overlay
 
 
 	.navbar{
 		background: #fff;
-		width: 300px;
-		padding: 70px 15px 15px;
+		width: 280px;
+		padding: 70px 5px 15px;
 		flex-flow: column;
 		top: 0;
 		bottom: 0;
 		right: 0;
 		position: absolute;
+		transition: .4s ease-in-out;
+		transform: translate3d(300px,0,0);
 	}//navbar
+
 
 
 	.navbar-nav{
@@ -34,10 +40,30 @@
 
 		.nav-item{
 			.nav-link{
-				
+				line-height: 1;
+				padding: 10px;
 			}//nav-link
 		}//nav-item
 	}//navbar-nav
 
+
+
+
+
+
+
+	&.in{
+		pointer-events: initial;
+
+		.navbar{
+			transform: translate3d(0,0,0);
+		}//navbar
+
+		.bsnav-mobile-overlay{
+			visibility: visible;
+			pointer-events: initial;
+		}//bsnav-mobile-overlay
+
+	}//in
 
 }//bsnav-mobile

@@ -1,7 +1,7 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-lg.bsnav.bsnav-brand-top
+	.navbar.navbar-expand-sm.bsnav.bsnav-brand-top
 
 		a.navbar-brand(href="#") Navbar
 
@@ -9,8 +9,8 @@ block content
 			span.navbar-toggler-icon
 
 
-		.collapse.navbar-collapse.justify-content-md-end
-			ul.navbar-nav.mr-0
+		.collapse.navbar-collapse.justify-content-xs-center
+			ul.navbar-nav.navbar-mobile.mr-0
 				li.nav-item.active
 					a.nav-link(href="#") Home
 				li.nav-item
@@ -23,9 +23,17 @@ block content
 					a.nav-link(href="#") Contact
 
 
+
 	.jumbotron.jumbotron-fluid
 		.container
 			h1 Brand top
+	
+
+
+	.bsnav-mobile
+		.bsnav-mobile-overlay
+		.navbar
+
 
 
 	style.
