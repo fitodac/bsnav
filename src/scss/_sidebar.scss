@@ -13,12 +13,45 @@
 
 
 	.navbar-nav{
+		padding-left: 15px;
+		padding-right: 15px;
 		flex-direction: column;
+
+		.nav-item{
+
+			.nav-link{
+				padding: 5px 0;
+			}//nav-link
+
+		}//nav-item
+
 	}//navbar-nav
+
 
 	.navbar-collapse{
 		width: 280px;
 	}//navbar-collapse
+
+
+	.justify-content-sm-end .navbar-nav{
+		text-align: right;
+	}//navbar-nav
+
+	.justify-content-sm-center .navbar-nav{
+		text-align: center;
+	}//navbar-nav
+
+
+	.nav-item .caret{
+		border-top-width: 4px;
+		border-top-color: transparent;
+		border-bottom-width: 4px;
+		border-bottom-color: transparent;
+		border-bottom-style: solid;
+		border-left-width: 5px;
+		border-left-color: #444;
+		border-right-width: 0;
+	}//caret
 
 }//bsnav-sidebar
 
@@ -46,3 +79,80 @@
 	}//bsnav-sidebar-right
 
 }//bsnav-body-wrapper
+
+
+
+
+
+@mixin sidebar-brand{
+	width: calc(100% - 10px);
+	background-size: contain;
+	margin-left: 5px;
+	margin-right: 5px;
+}//sidebar-brand
+
+
+
+@media (max-width: 576px) {
+
+	.navbar-expand-sm.bsnav-sidebar{
+		width: 70px;
+		justify-content: flex-start;
+
+
+		.bsnav-body-wrapper.bsnav-sidebar-left{ width: 70px; }
+
+		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: 70px; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: 70px; }
+
+		.navbar-brand{ @include sidebar-brand; }
+
+		.navbar-toggler{ flex: auto 0 0; }
+
+	}//bsnav-sidebar
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+	.navbar-expand-md.bsnav-sidebar{
+		width: 70px;
+		justify-content: flex-start;
+
+		.bsnav-body-wrapper.bsnav-sidebar-left{ width: 70px; }
+
+		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: 70px; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: 70px; }
+
+		.navbar-brand{ @include sidebar-brand; }
+
+		.navbar-toggler{ flex: auto 0 0; }
+
+	}//bsnav-sidebar
+
+}
+
+
+
+
+@media (max-width: 992px) {
+
+	.navbar-expand-lg.bsnav-sidebar{
+		width: 70px;
+		justify-content: flex-start;
+
+		.bsnav-body-wrapper.bsnav-sidebar-left{ width: 70px; }
+
+		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: 70px; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: 70px; }
+
+		.navbar-brand{ @include sidebar-brand; }
+
+		.navbar-toggler{ flex: auto 0 0; }
+
+	}//bsnav-sidebar
+
+}
