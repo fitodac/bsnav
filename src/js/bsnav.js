@@ -96,6 +96,8 @@
 
 				var _sidebar = $('.bsnav-sidebar .navbar-nav').eq(0),
 						_num = 1;
+				
+				_sidebar.attr('id', 'navbar-nav-0');
 
 
 				_sidebar.find('.navbar-nav').each(function(){
@@ -104,7 +106,7 @@
 							_index = $(this).parent().index();
 
 					$(this).parent().attr('data-child-navbar', _id);
-					$(this).prepend('<li class="nav-previous"></li>')
+					$(this).prepend('<li class="nav-previous" data-prev="navbar-nav-'+(_num - 1)+'"></li>')
 					$(this).attr('id', _id);
 					_num++;
 
@@ -129,22 +131,21 @@
 
 						_parentNav.addClass('out');
 						$(_navbar).addClass('active');
-						$('.bsnav-sidebar .navbar-nav.prev').removeClass('prev');
+						// $('.bsnav-sidebar .navbar-nav.prev').removeClass('prev');
 						setTimeout(function(){ 
-							_parentNav.removeClass('active').removeClass('out').addClass('prev');
+							_parentNav.removeClass('active').removeClass('out');
 						}, 400);
 					}
 				});
 
 
 				$(document).find('.bsnav-sidebar .nav-previous').on('click', function(e){
-					$('.bsnav-sidebar .navbar-nav.active').addClass('out');
-					$('.bsnav-sidebar .navbar-nav.prev').addClass('active');
-					// $('.bsnav-sidebar .navbar-nav.prev').removeClass('prev');
+					var _prev = $(this).data('prev');
+					$(this).parent().addClass('out');
+					$('#'+_prev).addClass('active');
+					// $('.bsnav-sidebar .navbar-nav.prev').addClass('active');
 					setTimeout(function(){ 
 						$('.bsnav-sidebar .navbar-nav.out').removeClass('active').removeClass('out');
-						$('.bsnav-sidebar .navbar-nav.prev').addClass('prev');
-						// _parentNav.removeClass('active').removeClass('out').addClass('prev');
 					}, 400);
 				});
 
