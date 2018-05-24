@@ -1,6 +1,10 @@
 /*---------------------------------------------------------*/
 /*	NAV PLACEMENT
 /*---------------------------------------------------------*/
+$zindex-fixed: 99;
+$zindex-sticky: 99;
+
+
 .navbar{
 
 	&.fixed-top{
@@ -73,9 +77,9 @@
 
 
 		&.in{
-			transition-duration: $navbar-transition;
-			transition-delay: $navbar-transition-delay;
-			transition-timing-function: $navbar-transition-timing-function;
+			// transition-duration: $navbar-transition;
+			// transition-delay: $navbar-transition-delay;
+			// transition-timing-function: $navbar-transition-timing-function;
 			transform: translateY(0);
 		}//in
 
@@ -95,9 +99,9 @@
 
 
 		&.in{
-			transition-duration: $navbar-transition;
-			transition-delay: $navbar-transition-delay;
-			transition-timing-function: $navbar-transition-timing-function;
+			// transition-duration: $navbar-transition;
+			// transition-delay: $navbar-transition-delay;
+			// transition-timing-function: $navbar-transition-timing-function;
 			visibility: visible;
 			opacity: 1;
 		}//in
