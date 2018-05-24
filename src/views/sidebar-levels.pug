@@ -1,7 +1,7 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-sm.bsnav.bsnav-sidebar
+	.navbar.navbar-expand-sm.bsnav.bsnav-sidebar.bsnav-sidebar-left
 
 		a.navbar-brand(href="#") Sidebar
 
@@ -9,7 +9,7 @@ block content
 			span.navbar-toggler-icon
 
 
-		.collapse.navbar-collapse.justify-content-sm-end
+		.collapse.navbar-collapse.justify-content-sm-end.align-items-start
 			ul.navbar-nav.navbar-mobile.mr-0
 				li.nav-item.active
 					a.nav-link(href="#") Home
@@ -39,16 +39,57 @@ block content
 										li.nav-item
 											a.nav-link(href="#") Other Action
 
+
 								li.nav-item
 									a.nav-link(href="#") Action
+
+
+								li.nav-item
+									a.nav-link(href="#") Levels #[i.caret]
+
+									ul.navbar-nav
+										li.nav-item
+											a.nav-link(href="#") Level 3
+										li.nav-item
+											a.nav-link(href="#") Action
+										li.nav-item
+											a.nav-link(href="#") Other Action
+
+
 								li.nav-item
 									a.nav-link(href="#") Other Action
 
 						li.nav-item
 							a.nav-link(href="#") Action
+
+
+						li.nav-item
+							a.nav-link(href="#") Levels #[i.caret]
+
+							ul.navbar-nav
+								li.nav-item
+									a.nav-link(href="#") Level 3
+								li.nav-item
+									a.nav-link(href="#") Action
+								li.nav-item
+									a.nav-link(href="#") Other Action
+
+
 						li.nav-item
 							a.nav-link(href="#") Other Action
 
+
+
+				li.nav-item
+					a.nav-link(href="#") Has children too #[i.caret]
+
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link(href="#") Level 1
+						li.nav-item
+							a.nav-link(href="#") Level 1
+						li.nav-item
+							a.nav-link(href="#") Level 1
 
 
 				li.nav-item
@@ -60,7 +101,7 @@ block content
 
 
 
-	.bsnav-body-wrapper.bsnav-sidebar-left
+	.bsnav-body-wrapper
 		.jumbotron.jumbotron-fluid
 			.container
 				h1 Sidebar levels

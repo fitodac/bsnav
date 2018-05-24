@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../examples/examples.min.css">
   </head>
   <body>
-    <div class="navbar navbar-expand-sm bsnav bsnav-sidebar"><a class="navbar-brand" href="#">Sidebar</a>
+    <div class="navbar navbar-expand-sm bsnav bsnav-sidebar bsnav-sidebar-left"><a class="navbar-brand" href="#">Sidebar</a>
       <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse justify-content-sm-end">
+      <div class="collapse navbar-collapse justify-content-sm-end align-items-start">
         <ul class="navbar-nav navbar-mobile mr-0">
           <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Has children! <i class="caret"></i></a>
@@ -29,11 +29,32 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#">Action</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Levels <i class="caret"></i></a>
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a class="nav-link" href="#">Level 3</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Action</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Other Action</a></li>
+                    </ul>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#">Other Action</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#">Action</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Levels <i class="caret"></i></a>
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="#">Level 3</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Action</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Other Action</a></li>
+                </ul>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#">Other Action</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Has children too <i class="caret"></i></a>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Level 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Level 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Level 1</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#">News</a></li>
@@ -42,7 +63,7 @@
         </ul>
       </div>
     </div>
-    <div class="bsnav-body-wrapper bsnav-sidebar-left">
+    <div class="bsnav-body-wrapper">
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1>Sidebar levels</h1>
