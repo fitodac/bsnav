@@ -11,6 +11,7 @@
 			this.toggler();
 			this.dropdown();
 			this.mobileMenu();
+			this.sideMenu();
 			// this.navbarSticky();
 			// this.navbarScrollspy();
 		},
@@ -82,6 +83,17 @@
 			});
 
 			$(window).resize(function(){ $('.bsnav-mobile').removeClass('in'); });
+
+		},
+
+
+		sideMenu: function(){
+
+			if( $('.bsnav-sidebar')[0] ){
+				console.log('sidebar exists');
+
+				console.log( $('.bsnav-sidebar .navbar-nav').eq(0) );
+			}
 
 		},
 
