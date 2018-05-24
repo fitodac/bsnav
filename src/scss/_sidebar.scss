@@ -4,6 +4,7 @@
 	top: 0;
 	position: fixed;
 	flex-direction: column;
+	overflow: hidden;
 
 
 	.navbar-brand{
@@ -13,9 +14,17 @@
 
 
 	.navbar-nav{
-		padding-left: 15px;
+		width: 100%;
+		padding-left: 45px;
 		padding-right: 15px;
 		flex-direction: column;
+		right: 0;
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s;
+		transform: scale(.8);
+
 
 		.nav-item{
 
@@ -24,6 +33,41 @@
 			}//nav-link
 
 		}//nav-item
+
+
+
+		&.out,
+		&.active.out{
+			opacity: 0;
+			visibility: hidden;
+			transform: translate3d(-200%,0,0);
+		}//out
+
+		&.active{
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1);
+		}//in.active
+
+
+		.nav-previous{
+			border-right: solid 1px #ddd;
+			text-align: center;
+			width: 45px;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			
+			&::after{
+				content: '';
+				border-top: solid 8px transparent;
+				border-bottom: solid 8px transparent;
+				border-right: solid 10px #444;
+				display: inline-block;
+				width: 0;
+				height: 0;
+			}//::after
+		}//nav-previous
 
 	}//navbar-nav
 
