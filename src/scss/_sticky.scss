@@ -5,51 +5,47 @@ $zindex-fixed: 99;
 $zindex-sticky: 99;
 
 
-.navbar{
-
-	&.fixed-top{
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: $zindex-fixed;
-	}//fixed-top
+.bsnav-sticky{
+	left: 0;
+	right: 0;
+	position: absolute;
+	z-index: 99;
 
 
-	&.fixed-bottom{
-		margin: 0;
-		position: fixed;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: $zindex-fixed;
-	}//fixed-bottom
+
+	// SLIDE
+	&.bsnav-sticky-slide{
+
+		&.sticked{
+			position: fixed;
+			transform: translate3d(0,-100%,0);
+		}//sticked
+
+		&.sticked.in{
+			transition: transform .4s .2s;
+			transform: translate3d(0,0,0);
+		}//sticked
+
+	}//bsnav-sticky-slide
 
 
-	&.sticky{
-		position: sticky;
-		top: 0;
-		z-index: $zindex-sticky;
-	}//sticky-top
 
+	// FADE
+	&.bsnav-sticky-fade{
 
-	&.absolute-top{
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: $zindex-fixed;
-	}//fixed-top
+		&.sticked{
+			position: fixed;
+			opacity: 0;
+			visibility: hidden;
+		}//sticked
 
+		&.sticked.in{
+			transition: opacity .3s .2s;
+			opacity: 1;
+			visibility: visible;
+		}//sticked
 
-	&.absolute-bottom{
-		margin: 0;
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: $zindex-fixed;
-	}//fixed-bottom
+	}//bsnav-sticky-fade
 
 
 
@@ -109,10 +105,4 @@ $zindex-sticky: 99;
 	}//fade
 
 
-
-
-
-}//navbar
-
-
-
+}//bsnav-sticky
