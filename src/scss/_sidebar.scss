@@ -121,15 +121,17 @@
 
 @media (max-width: 576px) {
 
+	$width: 70px;
+
 	.navbar-expand-sm.bsnav-sidebar{
-		width: 70px;
+		width: $width;
 		justify-content: flex-start;
 
 
-		.bsnav-body-wrapper.bsnav-sidebar-left{ width: 70px; }
+		.bsnav-body-wrapper.bsnav-sidebar-left{ width: $width; }
 
-		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: 70px; }
-		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: 70px; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: $width; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: $width; }
 
 		.navbar-brand{ @include sidebar-brand; }
 
@@ -144,14 +146,16 @@
 
 @media (max-width: 768px) {
 
+	$width: 70px;
+
 	.navbar-expand-md.bsnav-sidebar{
-		width: 70px;
+		width: $width;
 		justify-content: flex-start;
 
-		.bsnav-body-wrapper.bsnav-sidebar-left{ width: 70px; }
+		.bsnav-body-wrapper.bsnav-sidebar-left{ width: $width; }
 
-		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: 70px; }
-		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: 70px; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: $width; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: $width; }
 
 		.navbar-brand{ @include sidebar-brand; }
 
@@ -166,14 +170,16 @@
 
 @media (max-width: 992px) {
 
+	$width: 70px;
+
 	.navbar-expand-lg.bsnav-sidebar{
-		width: 70px;
+		width: $width;
 		justify-content: flex-start;
 
-		.bsnav-body-wrapper.bsnav-sidebar-left{ width: 70px; }
+		.bsnav-body-wrapper.bsnav-sidebar-left{ width: $width; }
 
-		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: 70px; }
-		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: 70px; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: $width; }
+		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: $width; }
 
 		.navbar-brand{ @include sidebar-brand; }
 

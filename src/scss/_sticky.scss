@@ -73,9 +73,6 @@ $zindex-sticky: 99;
 
 
 		&.in{
-			// transition-duration: $navbar-transition;
-			// transition-delay: $navbar-transition-delay;
-			// transition-timing-function: $navbar-transition-timing-function;
 			transform: translateY(0);
 		}//in
 
@@ -95,9 +92,6 @@ $zindex-sticky: 99;
 
 
 		&.in{
-			// transition-duration: $navbar-transition;
-			// transition-delay: $navbar-transition-delay;
-			// transition-timing-function: $navbar-transition-timing-function;
 			visibility: visible;
 			opacity: 1;
 		}//in
