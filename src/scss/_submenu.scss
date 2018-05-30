@@ -11,6 +11,7 @@ $submenu-width: 200px;
 	pointer-events: none;
 	flex-direction: column;
 	transition: .3s;
+	transition-delay: .1s;
 	clip: rect(0, 100vw, 0, 0);
 
 

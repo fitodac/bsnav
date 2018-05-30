@@ -1,3 +1,6 @@
+$sidebar-desktop-width: 250px;
+
+
 @mixin navbar-nav{
 
 	.navbar-nav{
@@ -10,6 +13,7 @@
 
 			.nav-link{
 				padding: 5px 0;
+				display: inline-block;
 			}//nav-link
 
 
@@ -65,6 +69,15 @@
 	.navbar-brand{
 		margin-left: 0;
 		margin-right: 0;
+
+
+		&.align-self-start{
+			margin-left: 15px;
+		}
+
+		&.align-self-end{
+			margin-right: 15px;
+		}
 	}//navbar-brand
 
 
@@ -73,7 +86,7 @@
 
 
 	.navbar-collapse{
-		width: 280px;
+		width: $sidebar-desktop-width;
 	}//navbar-collapse
 
 
@@ -98,7 +111,61 @@
 	}//collapse
 
 
+
+	/*-------------------------------------------------*/
+	/*	SIDEBAR CONDENSED
+	/*-------------------------------------------------*/
+	&.bsnav-sidebar-condensed{
+		transition: transform .4s .1s ease-in-out;
+
+		.navbar-nav{
+			.nav-item{
+				.nav-link{
+					display: flex;
+					flex-flow: row wrap;
+					align-items: center;
+					justify-content: space-between;
+				}//nav-link
+			}//nav-item
+		}//navbar-nav
+
+
+		&.bsnav-sidebar-right{}//bsnav-sidebar-right
+
+	}//.bsnav-sidebar-condensed
+
+
+
+
+	.icon-thumbnail{
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+
+
+		> i{
+			font-size: 28px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: -1px;
+			position: relative;
+		}
+	}//icon-thumbnail
+
+
 }//bsnav-sidebar
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -106,14 +173,42 @@
 
 .bsnav-has-left-sidebar{
 	.bsnav-sidebar-left{ left: 0; }
-	.bsnav-body-wrapper{ padding-left: 280px; }
+	.bsnav-body-wrapper{ padding-left: $sidebar-desktop-width; }
 }//bsnav-has-left-sidebar
 
 
 .bsnav-has-right-sidebar{
 	.bsnav-sidebar-right{ right: 0; }
-	.bsnav-body-wrapper{ padding-right: 280px; }
+	.bsnav-body-wrapper{ padding-right: $sidebar-desktop-width; }
 }//bsnav-has-right-sidebar
+
+
+
+
+// SIDEBAR CONDENSED
+.bsnav-has-condensed-sidebar{
+
+	.bsnav-sidebar-left{ 
+		left: -180px; 
+
+		&:hover{ transform: translate3d(180px,0,0); }
+	}//bsnav-sidebar-left
+
+	.bsnav-sidebar-right{ 
+		right: -180px; 
+
+		&:hover{ transform: translate3d(-180px,0,0); }
+	}//bsnav-sidebar-right
+
+
+	&.bsnav-has-left-sidebar .bsnav-body-wrapper{ padding-left: $sidebar-desktop-width - 180px; }
+	&.bsnav-has-right-sidebar .bsnav-body-wrapper{ padding-right: $sidebar-desktop-width - 180px; }
+
+}//bsnav-has-left-sidebar
+
+
+
+
 
 
 

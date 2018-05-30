@@ -1,33 +1,31 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-sm.bsnav.bsnav-sidebar.bsnav-sidebar-right
+	.navbar.navbar-expand-sm.bsnav.bsnav-sidebar.bsnav-sidebar-left.bsnav-sidebar-condensed
 
-		a.navbar-brand(href="#") bsnav
+		a.navbar-brand.align-self-start(href="#") bsnav
 
 		button.navbar-toggler.toggler-spring
 			span.navbar-toggler-icon
 
 
-		.collapse.navbar-collapse.justify-content-sm-center
+		.collapse.navbar-collapse.justify-content-sm-start.align-items-start
 			ul.navbar-nav.navbar-mobile.mr-0
 				li.nav-item.active
-					a.nav-link(href="#") Home
+					a.nav-link(href="#") Home #[span.icon-thumbnail: i.fa.fa-home]
 				li.nav-item
-					a.nav-link(href="#") About Us
+					a.nav-link(href="#") News #[span.icon-thumbnail: i.fa.fa-newspaper-o]
 				li.nav-item
-					a.nav-link(href="#") News
+					a.nav-link(href="#") Gallery #[span.icon-thumbnail: i.fa.fa-image]
 				li.nav-item
-					a.nav-link(href="#") Gallery
-				li.nav-item
-					a.nav-link(href="#") Contact
+					a.nav-link(href="#") Contact #[span.icon-thumbnail: i.fa.fa-envelope]
 
 
 
 	.bsnav-body-wrapper
 		.jumbotron.jumbotron-fluid
 			.container
-				h1 Sidebar
+				h1 Sidebar condensed
 		
 
 		.container
