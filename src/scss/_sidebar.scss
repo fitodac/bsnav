@@ -12,8 +12,17 @@ $sidebar-desktop-width: 250px;
 		.nav-item{
 
 			.nav-link{
+				max-width: 100%;
 				padding: 5px 0;
 				display: inline-block;
+
+				> .title{
+					max-width: calc(100% - 20px);
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: inline-block;
+				}//title
 			}//nav-link
 
 
@@ -25,17 +34,27 @@ $sidebar-desktop-width: 250px;
 			}//navbar-nav
 
 
-			.navbar-nav{ background: #f9f9f9; }
-			.navbar-nav .navbar-nav{ background: #f2f2f2; }
-			.navbar-nav .navbar-nav .navbar-nav{ background: #E8E8E8; }
-			.navbar-nav .navbar-nav .navbar-nav .navbar-nav{ background: #E0E0E0; }
-			.navbar-nav .navbar-nav .navbar-nav .navbar-nav .navbar-nav{ background: #DCDCDC; }
-			.navbar-nav .navbar-nav .navbar-nav .navbar-nav .navbar-nav .navbar-nav{ background: #D8D8D8; }
-
 
 			&.active .navbar-nav{
 				display: block;
 			}
+
+
+			&.menu-item-has-children{
+				> .nav-link{
+					display: flex;
+					flex-flow: row wrap;
+					align-items: center;
+					justify-content: space-between;
+				}// > .nav-link
+
+				> .navbar-nav{
+					// width: calc(100% - 7px);
+					padding-top: 0;
+					padding-bottom: 30px;
+				}//navbar-nav
+			}//menu-item-has-children
+
 
 		}//nav-item
 
@@ -112,6 +131,8 @@ $sidebar-desktop-width: 250px;
 
 
 
+
+
 	/*-------------------------------------------------*/
 	/*	SIDEBAR CONDENSED
 	/*-------------------------------------------------*/
@@ -144,7 +165,7 @@ $sidebar-desktop-width: 250px;
 
 
 		> i{
-			font-size: 28px;
+			font-size: 25px;
 			height: 100%;
 			display: flex;
 			align-items: center;

@@ -1,15 +1,15 @@
 extends templates/_template.pug
 
 block content
-	.navbar.navbar-expand-sm.bsnav.bsnav-sidebar.bsnav-sidebar-left
+	.navbar.navbar-expand-sm.bsnav.bsnav-sidebar.bsnav-sidebar-right
 
-		a.navbar-brand.align-self-end(href="#") bsnav
+		a.navbar-brand.align-self-start(href="#") bsnav
 
 		button.navbar-toggler.toggler-spring
 			span.navbar-toggler-icon
 
 
-		.collapse.navbar-collapse.justify-content-sm-end.align-items-start
+		.collapse.navbar-collapse.justify-content-sm-start.align-items-start
 			ul.navbar-nav.navbar-mobile.mr-0
 				li.nav-item.active
 					a.nav-link(href="#") Home
@@ -17,19 +17,19 @@ block content
 
 
 				li.nav-item
-					a.nav-link(href="#") #[i.caret] #[span.title Has children!]
+					a.nav-link(href="#") #[span.title Has children!] #[i.caret]
 
 					ul.navbar-nav
 						li.nav-item
 							a.nav-link(href="#") Level 1
 						li.nav-item
-							a.nav-link(href="#") #[i.caret] #[span.title Levels]
+							a.nav-link(href="#") #[span.title Levels] #[i.caret]
 
 							ul.navbar-nav
 								li.nav-item
 									a.nav-link(href="#") Level 2
 								li.nav-item
-									a.nav-link(href="#") #[i.caret] #[span.title Levels]
+									a.nav-link(href="#") #[span.title Levels] #[i.caret]
 
 									ul.navbar-nav
 										li.nav-item
@@ -45,7 +45,7 @@ block content
 
 
 								li.nav-item
-									a.nav-link(href="#") #[i.caret] #[span.title Levels]
+									a.nav-link(href="#") #[span.title Levels] #[i.caret]
 
 									ul.navbar-nav
 										li.nav-item
@@ -64,7 +64,7 @@ block content
 
 
 						li.nav-item
-							a.nav-link(href="#") #[i.caret] #[span.title Levels]
+							a.nav-link(href="#") #[span.title Levels] #[i.caret]
 
 							ul.navbar-nav
 								li.nav-item
@@ -81,7 +81,7 @@ block content
 
 
 				li.nav-item
-					a.nav-link(href="#") #[i.caret] #[span.title Has children too]
+					a.nav-link(href="#") #[span.title Has children too] #[i.caret]
 
 					ul.navbar-nav
 						li.nav-item
