@@ -1,17 +1,4 @@
-.bsnav-sidebar{
-	height: 100vh;
-	padding: 0;
-	top: 0;
-	position: fixed;
-	flex-direction: column;
-	overflow: hidden;
-
-
-	.navbar-brand{
-		margin-left: 0;
-		margin-right: 0;
-	}//navbar-brand
-
+@mixin navbar-nav{
 
 	.navbar-nav{
 		width: 100%;
@@ -59,6 +46,30 @@
 
 
 	}//navbar-nav
+
+}
+
+
+
+
+
+.bsnav-sidebar{
+	height: 100vh;
+	padding: 0;
+	top: 0;
+	position: fixed;
+	flex-direction: column;
+	overflow: hidden;
+
+
+	.navbar-brand{
+		margin-left: 0;
+		margin-right: 0;
+	}//navbar-brand
+
+
+	@include navbar-nav;
+	
 
 
 	.navbar-collapse{
@@ -119,7 +130,7 @@
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
 
 	$width: 70px;
 
@@ -129,15 +140,22 @@
 
 
 		.bsnav-body-wrapper.bsnav-sidebar-left{ width: $width; }
-
-		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: $width; }
-		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: $width; }
-
 		.navbar-brand{ @include sidebar-brand; }
-
 		.navbar-toggler{ flex: auto 0 0; }
 
 	}//bsnav-sidebar
+
+
+	.bsnav-has-left-sidebar{
+		.bsnav-sidebar-left{ left: 0; }
+		.bsnav-body-wrapper{ padding-left: $width; }
+	}//bsnav-has-left-sidebar
+	
+	
+	.bsnav-has-right-sidebar{
+		.bsnav-sidebar-right{ right: 0; }
+		.bsnav-body-wrapper{ padding-right: $width; }
+	}//bsnav-has-right-sidebar
 
 }
 
@@ -153,15 +171,22 @@
 		justify-content: flex-start;
 
 		.bsnav-body-wrapper.bsnav-sidebar-left{ width: $width; }
-
-		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: $width; }
-		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: $width; }
-
 		.navbar-brand{ @include sidebar-brand; }
-
 		.navbar-toggler{ flex: auto 0 0; }
 
 	}//bsnav-sidebar
+
+
+	.bsnav-has-left-sidebar{
+		.bsnav-sidebar-left{ left: 0; }
+		.bsnav-body-wrapper{ padding-left: $width; }
+	}//bsnav-has-left-sidebar
+	
+	
+	.bsnav-has-right-sidebar{
+		.bsnav-sidebar-right{ right: 0; }
+		.bsnav-body-wrapper{ padding-right: $width; }
+	}//bsnav-has-right-sidebar
 
 }
 
@@ -177,14 +202,21 @@
 		justify-content: flex-start;
 
 		.bsnav-body-wrapper.bsnav-sidebar-left{ width: $width; }
-
-		& + .bsnav-body-wrapper.bsnav-sidebar-left{ padding-left: $width; }
-		& + .bsnav-body-wrapper.bsnav-sidebar-right{ padding-right: $width; }
-
 		.navbar-brand{ @include sidebar-brand; }
-
 		.navbar-toggler{ flex: auto 0 0; }
 
 	}//bsnav-sidebar
+
+
+	.bsnav-has-left-sidebar{
+		.bsnav-sidebar-left{ left: 0; }
+		.bsnav-body-wrapper{ padding-left: $width; }
+	}//bsnav-has-left-sidebar
+	
+	
+	.bsnav-has-right-sidebar{
+		.bsnav-sidebar-right{ right: 0; }
+		.bsnav-body-wrapper{ padding-right: $width; }
+	}//bsnav-has-right-sidebar
 
 }
