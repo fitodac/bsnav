@@ -105,6 +105,8 @@
 
 				if( $('.bsnav-sidebar-left')[0] ){ $('body').addClass('bsnav-has-left-sidebar'); }
 				if( $('.bsnav-sidebar-right')[0] ){ $('body').addClass('bsnav-has-right-sidebar'); }
+				if( $('.bsnav-sidebar-condensed')[0] ){ $('body').addClass('bsnav-has-condensed-sidebar'); }
+				$('.bsnav-sidebar .nav-item > .navbar-nav').parent().addClass('menu-item-has-children');
 
 			}
 

@@ -13,6 +13,12 @@ a.card{
 	&:hover, &:active, &:focus, &:active:focus{
 		text-decoration: none;
 	}
+
+	small.card-text{
+		color: lighten(#999, 10%);
+		line-height: 1.2;
+		display: block;
+	}
 }//.card
 
 
@@ -21,7 +27,7 @@ a.card{
 	background: url('images/brand.png') no-repeat center / cover;
 	font-size: 0;
 	width: 110px;
-	height: 28px;
+	height: 30px;
 	margin: 18px 15px 18px 0;
 	opacity: .6;
 }//navbar-brand

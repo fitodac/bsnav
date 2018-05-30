@@ -16,12 +16,12 @@ gulp.task('scripts', function(){
 	gulp.src('js/*.js')
 		// Compile
 		.pipe(concat('bsnav.js'))
-		.pipe(gulp.dest('../dist/js'))
+		// .pipe(gulp.dest('../dist'))
 		
 		// Minify
 		.pipe(rename('bsnav.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('../dist/js'))
+		.pipe(gulp.dest('../dist'))
 
 		.pipe(notify({ message: 'Scripts are compiled!', onLast: true }));
 });
@@ -42,7 +42,7 @@ gulp.task('sass', function(cb){
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('../dist/css/'))
+		.pipe(gulp.dest('../dist'))
 
 		.pipe(notify({ message: 'SASS compiled!', onLast: true }));
 
