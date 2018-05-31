@@ -151,6 +151,23 @@ $sidebar-desktop-width: 250px;
 		}//navbar-nav
 
 
+		.collapse > .navbar-nav > .nav-item > .nav-link > .title{
+			left: -30px;
+			position: relative;
+			opacity: 0;
+			visibility: hidden;
+			transition: .3s;
+		}//title
+
+
+		&.bsnav-sidebar-left:hover{
+			.collapse > .navbar-nav > .nav-item > .nav-link > .title{
+				left: 0;
+				opacity: 1;
+				visibility: visible;
+			}
+		}//bsnav-sidebar-left
+
 		&.bsnav-sidebar-right{}//bsnav-sidebar-right
 
 	}//.bsnav-sidebar-condensed
