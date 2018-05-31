@@ -151,24 +151,46 @@ $sidebar-desktop-width: 250px;
 		}//navbar-nav
 
 
+		&.bsnav-sidebar-left{
+			.collapse > .navbar-nav > .nav-item > .nav-link > .title{
+				left: -30px;
+			}
+		}//bsnav-sidebar-left
+
+		&.bsnav-sidebar-right{
+			.collapse > .navbar-nav > .nav-item > .nav-link > .title{
+				right: -30px;
+			}
+		}//bsnav-sidebar-right
+
+
 		.collapse > .navbar-nav > .nav-item > .nav-link > .title{
-			left: -30px;
 			position: relative;
 			opacity: 0;
 			visibility: hidden;
 			transition: .3s;
 		}//title
 
+		&:hover{
+			.collapse > .navbar-nav > .nav-item > .nav-link > .title{
+				opacity: 1;
+				visibility: visible;
+			}
+		}//bsnav-sidebar
+
 
 		&.bsnav-sidebar-left:hover{
 			.collapse > .navbar-nav > .nav-item > .nav-link > .title{
 				left: 0;
-				opacity: 1;
-				visibility: visible;
 			}
 		}//bsnav-sidebar-left
 
-		&.bsnav-sidebar-right{}//bsnav-sidebar-right
+
+		&.bsnav-sidebar-right:hover{
+			.collapse > .navbar-nav > .nav-item > .nav-link > .title{
+				right: 0;
+			}
+		}//bsnav-sidebar-right
 
 	}//.bsnav-sidebar-condensed
 

@@ -2,6 +2,7 @@ var gulp 				= require('gulp'),
 		pug 				= require('gulp-pug'), // npm install gulp-pug		
 		concat 			= require('gulp-concat'), // npm install gulp-concat
 		uglify 			= require('gulp-uglify'), // npm install gulp-uglify
+		minify 			= require('gulp-minify'), // npm install --save-dev gulp-minify
 		rename 			= require('gulp-rename'), // npm install gulp-rename
 		sass 				= require('gulp-sass'), // npm install node-sass
 		cssmin 			= require('gulp-cssmin'), // npm install gulp-cssmin
@@ -14,13 +15,15 @@ var gulp 				= require('gulp'),
 // To compile js, just run 'gulp scripts' on console and be sure to have the right paths.
 gulp.task('scripts', function(){  
 	gulp.src('js/*.js')
-		// Compile
-		.pipe(concat('bsnav.js'))
-		// .pipe(gulp.dest('../dist'))
-		
-		// Minify
-		.pipe(rename('bsnav.min.js'))
-		.pipe(uglify())
+	
+		.pipe(minify({
+			ext:{
+					src:'.js',
+					min:'.min.js'
+			},
+			// exclude: ['tasks'],
+			// ignoreFiles: ['.combo.js', '-min.js']
+		}))
 		.pipe(gulp.dest('../dist'))
 
 		.pipe(notify({ message: 'Scripts are compiled!', onLast: true }));
