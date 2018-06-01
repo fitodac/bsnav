@@ -4,7 +4,132 @@
 .navbar-nav .nav-item{
 	color: #000;
 
-	// Font smoothing
-	// -webkit-font-smoothing: antialiased;
-	// -moz-osx-font-smoothing: grayscale;
+	$active: #64DD17;
+
+
+	/*------------------------------------------------*/
+	/*	FILL
+	/*------------------------------------------------*/
+	&.nav-fill > .nav-link{
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus{
+			background: $active;
+			color: #fff;
+		}// nav-fill
+
+	}// nav-link
+
+
+	&.nav-fill.active > .nav-link{
+		background: $active;
+		color: #fff;
+	}// nav-fill
+
+
+
+
+	/*------------------------------------------------*/
+	/*	LINE
+	/*------------------------------------------------*/
+	&.nav-line > .nav-link::after{
+		content: '';
+		background: $active;
+		width: 0;
+		height: 2px;
+		left: 50%;
+		bottom: 0;
+		position: absolute;
+		transition: .3s;
+	}//nav-line
+
+
+	&.nav-line > .nav-link:hover,
+	&.nav-line > .nav-link:focus,
+	&.nav-line > .nav-link:active,
+	&.nav-line > .nav-link:active:focus,
+	&.nav-line.active > .nav-link{
+		color: $active;
+
+		&::after{
+			width: 100%;
+			left: 0;
+		}//::after
+	}// nav-line
+
+
+
+
+
+	/*------------------------------------------------*/
+	/*	DOUBLE LINE
+	/*------------------------------------------------*/
+	&.nav-double-line > .nav-link{
+
+		&::before, &::after{
+			content: '';
+			background: $active;
+			width: 0;
+			height: 2px;
+			left: 50%;
+			position: absolute;
+			transition: .3s;
+		}//::before / after
+
+
+		&::before{
+			top: 0;
+		}//::before
+		
+		&::after{
+			bottom: 0;
+		}//::after
+		
+	}//nav-link
+
+
+	&.nav-double-line > .nav-link:hover,
+	&.nav-double-line > .nav-link:focus,
+	&.nav-double-line > .nav-link:active,
+	&.nav-double-line > .nav-link:active:focus,
+	&.nav-double-line.active > .nav-link{
+		color: $active;
+
+		&::before, &::after{
+			width: 100%;
+			left: 0;
+		}//::before / after
+
+	}
+
+
+
+
+
+	/*------------------------------------------------*/
+	/*	FILL TEXT
+	/*------------------------------------------------*/
+	&.nav-fill-text > .nav-link{
+		background-image: url('https://picsum.photos/600/400?image=1080');
+		font-weight: 600;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		// position: relative;
+		// box-shadow: 0 300px 0 $active inset;
+
+		// &::after{
+		// 	content: '';
+		// 	background: $active;
+		// 	width: 100%;
+		// 	height: 2px;
+		// 	left: 0;
+		// 	bottom: 0;
+		// 	position: absolute;
+		// }//::after
+	}// nav-fill-text
+
+
 }//nav-item

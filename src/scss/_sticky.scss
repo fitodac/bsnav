@@ -8,13 +8,14 @@ $zindex-sticky: 99;
 .bsnav-sticky{
 	left: 0;
 	right: 0;
-	position: absolute;
+	position: fixed;
 	z-index: 99;
 
 
 
 	// SLIDE
 	&.bsnav-sticky-slide{
+		position: absolute;
 
 		&.sticked{
 			position: fixed;
@@ -32,6 +33,7 @@ $zindex-sticky: 99;
 
 	// FADE
 	&.bsnav-sticky-fade{
+		position: absolute;
 
 		&.sticked{
 			position: fixed;

@@ -27,7 +27,7 @@ a.card{
 	background: url('images/brand.png') no-repeat center / cover;
 	font-size: 0;
 	width: 110px;
-	height: 30px;
+	height: 28px;
 	margin: 18px 15px 18px 0;
 	opacity: .6;
 }//navbar-brand
@@ -68,4 +68,16 @@ a.card{
 
 .bsnav-sticky{
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+
+.scrollspy-demo{
+	height: 100vh;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+
+	&:nth-child(odd){
+		background: #f7f7f7;
+	}
 }
