@@ -6,13 +6,7 @@
 	color: inherit;
 	padding: 20px 15px;
 	display: block;
+	position: relative;
 	transition: .3s;
 	cursor: pointer;
-
-
-	// @include linkHover(
-	// 	background $nav-link-hover-bg,
-	// 	color $nav-link-hover-color
-	// );
-
 }//nav-link

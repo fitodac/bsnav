@@ -13,7 +13,7 @@
 			this.mobileMenu();
 			this.sideMenu();
 			this.navbarSticky();
-			// this.navbarScrollspy();
+			this.scrollspy();
 		},
 
 
@@ -41,7 +41,7 @@
 
 
 
-		dropdown: function(){
+		dropdown : function(){
 
 			$('.bsnav .nav-item.dropdown')
 			.on('mouseenter', function(){
@@ -57,7 +57,7 @@
 
 
 
-		mobileMenu: function(){
+		mobileMenu : function(){
 
 			if( $('.bsnav .navbar-mobile')[0] && $('.bsnav-mobile')[0] ){
 
@@ -97,7 +97,7 @@
 
 
 
-		sideMenu: function(){
+		sideMenu : function(){
 
 			if( $('.bsnav-sidebar')[0] ){
 
@@ -116,7 +116,7 @@
 
 
 
-		sideMenuNavigation: function(el){
+		sideMenuNavigation : function(el){
 
 			el.find('.nav-link').on('click', function(e){
 
@@ -149,11 +149,11 @@
 
 
 
-		navbarSticky: function(){
+		navbarSticky : function(){
 
 			var sticky = function(el, limit, scrolltop){
 										if( scrolltop > limit ) el.addClass('sticked');
-										if( scrolltop > limit + 80 ) el.addClass('in');
+										if( scrolltop > limit + 30 ) el.addClass('in');
 										if( scrolltop == 0 ) el.removeClass('sticked').removeClass('in');
 									}//sticky()
 
@@ -174,6 +174,68 @@
 			}
 
 		},
+
+
+
+		scrollspy : function(){ 
+
+			var _nav = $('.bsnav-scrollspy'),
+					_navHeight = _nav.outerHeight(),
+					_sections = [];
+
+			
+			if( _nav.length ){
+
+				_nav.find('[data-scrollspy]').each(function(e){
+					_sections.push($(this).data('scrollspy'));
+				});
+
+
+
+				function navOffset(){
+					_nav.find('[data-scrollspy]').click(function(e){
+						e.preventDefault();
+						_nav.addClass('spying');
+						var _target = $(this).data('scrollspy');
+						_nav.find('.nav-item').removeClass('active');
+						$(this).parent().addClass('active');
+
+						$('html,body').animate({
+							scrollTop: $('#'+_target).offset().top - _navHeight
+						}, 800, function(){
+							_nav.removeClass('spying');
+						});
+					});
+				}
+
+
+
+				function scrollSpy(){
+					if( !_nav.hasClass('spying') ){
+						var _winScroll = $(window).scrollTop();
+
+						_sections.map(function(v,i){
+							var _top = $('#'+v).offset().top - _navHeight,
+									_bottom = _top + $('#'+v).outerHeight();
+							
+							if( _winScroll >= _top && _winScroll <= _bottom ){
+								_nav.find('.nav-item').removeClass('active');
+								$('[data-scrollspy='+ v +']').parent().addClass('active');
+							}
+						});
+					}
+				}
+
+
+
+				$(window).scroll(function() {
+					scrollSpy();
+				});
+				navOffset();
+
+
+			}
+		}
 
 
 	};
