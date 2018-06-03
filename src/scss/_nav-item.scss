@@ -7,13 +7,16 @@
 	$active: #64DD17;
 
 
-	&:hover,
-	&:focus,
-	&:active,
-	&:active:focus,
+	&:hover > .nav-link,
+	&:focus > .nav-link,
+	&:active > .nav-link,
+	&:active:focus > .nav-link,
 	&.active > .nav-link{
 		color: $active;
 	}//hover, active
+
+
+
 
 
 	/*------------------------------------------------*/
@@ -21,10 +24,10 @@
 	/*------------------------------------------------*/
 	&.nav-item-fill > .nav-link{
 
-		&:hover,
-		&:focus,
-		&:active,
-		&:active:focus{
+		&:hover > .nav-link,
+		&:focus > .nav-link,
+		&:active > .nav-link,
+		&:active:focus > .nav-link{
 			background: $active;
 			color: #fff;
 		}// nav-fill

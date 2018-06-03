@@ -3,6 +3,8 @@
 /*------------------------------------------------------------*/
 $size: 5px;
 
+$active: #64DD17;
+
 .nav-item .caret{
 	width: 0;
 	height: 0;
@@ -13,7 +15,14 @@ $size: 5px;
 	border-top: solid $size #444;
 	vertical-align: middle;
 	display: inline-block;
+	transition: .3s;
 }//caret
+
+
+.nav-item:hover .caret,
+.nav-item.active .caret{
+	border-top-color: $active;
+}
 
 
 
