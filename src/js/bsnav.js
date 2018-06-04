@@ -181,7 +181,8 @@
 
 			var _nav = $('.bsnav-scrollspy'),
 					_navHeight = _nav.outerHeight(),
-					_sections = [];
+					_sections = [],
+					_sidebar = $('.navbar').hasClass('bsnav-sidebar') ? true : false;
 
 			
 			if( _nav.length ){
@@ -199,9 +200,11 @@
 						var _target = $(this).data('scrollspy');
 						_nav.find('.nav-item').removeClass('active');
 						$(this).parent().addClass('active');
+						var _scrolltop = $('#'+_target).offset().top - _navHeight;
+						if( _sidebar ) _scrolltop = $('#'+_target).offset().top;
 
 						$('html,body').animate({
-							scrollTop: $('#'+_target).offset().top - _navHeight
+							scrollTop: _scrolltop
 						}, 800, function(){
 							_nav.removeClass('spying');
 						});
@@ -212,15 +215,24 @@
 
 				function scrollSpy(){
 					if( !_nav.hasClass('spying') ){
-						var _winScroll = $(window).scrollTop();
+						var _winScroll = $(window).scrollTop(),
+								_firstSection = $('#'+_sections[0]).offset().top - _navHeight;
+
+						if( _sidebar ) _firstSection = $('#'+_sections[0]).offset().top;
+
 
 						_sections.map(function(v,i){
-							var _top = $('#'+v).offset().top - _navHeight,
-									_bottom = _top + $('#'+v).outerHeight();
+							var _top = $('#'+v).offset().top - _navHeight;
+							if( _sidebar ) _top = $('#'+v).offset().top;
+							var _bottom = _top + $('#'+v).outerHeight();
 							
 							if( _winScroll >= _top && _winScroll <= _bottom ){
 								_nav.find('.nav-item').removeClass('active');
 								$('[data-scrollspy='+ v +']').parent().addClass('active');
+							}
+
+							if( _winScroll < _firstSection ){
+								_nav.find('.nav-item').removeClass('active');
 							}
 						});
 					}
