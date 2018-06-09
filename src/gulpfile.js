@@ -61,7 +61,7 @@ gulp.task('sass-example', function(cb){
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('../examples/'))
+		.pipe(gulp.dest('../docs/'))
 
 		.pipe(notify({ message: 'SASS compiled!', onLast: true }));
 
@@ -75,7 +75,7 @@ gulp.task('sass-example', function(cb){
 gulp.task('pug', function buildHTML() {
   return gulp.src('views/*.pug')
 	.pipe(pug({ pretty: true }))
-	.pipe(gulp.dest('../examples'))
+	.pipe(gulp.dest('../docs/'))
 	.pipe(notify({ message: 'Pug compiled!', onLast: true }));
 });
 
