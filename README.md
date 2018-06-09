@@ -1,7 +1,7 @@
 # bsnav
 Bsnav is an extended Bootstrap 4 menu with a bunch of utilities
 
-https://fitodac.github.io/bsnav/
+[Demo](https://fitodac.github.io/bsnav/){:target="_blank"}
 
 
 1. Add bsnav.min.css to the head of the page.
