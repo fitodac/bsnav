@@ -1,10 +1,70 @@
-extends templates/_template.pug
+extends templates/_template-frontpage.pug
 
 block content
-	.jumbotron.jumbotron-fluid.bg-info.text-white
+	.hero.jumbotron.jumbotron-fluid
 		.container.text-center
 			h1.display-4 bsnav
-			p.lead Bootstrap navbar with esteroids
+			p.lead Extended Bootstrap 4 navbar
+
+
+
+
+
+
+	.container
+		.row.align-items-center
+			.col
+				.browser
+					img(src="images/01.jpg")
+					.browser-wrapper
+						.example
+							img#style-basic(src="images/style-basic.svg")
+
+
+			.col
+				.h3.section-title Styles
+
+				.row
+					.col-sm-4
+						ul.section-list
+							li: button.btn Basic
+							li: button.btn Dark
+							li: button.btn Transparent
+
+					.col-sm-4
+						ul.section-list
+							li: button.btn Light
+							li: button.btn Overlay
+							li: button.btn Overlay light
+
+					.col-sm-4
+
+
+	.h-170px
+
+
+
+
+
+
+
+
+	#layout.jumbotron.jumbotron-fluid
+		.container
+			.h3.section-title Layout
+
+			.row
+				.col-sm-4
+
+				.col-sm-4
+
+				.col-sm-4
+
+
+
+
+
+
 
 
 	.container

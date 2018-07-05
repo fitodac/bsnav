@@ -1,0 +1,31 @@
+doctype html
+| <!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" class="no-js ie8" lang="en"><![endif]-->
+| <!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" class="no-js ie9" lang="en"><![endif]-->
+html(lang='en')
+	head
+		block page
+		meta(charset="utf-8")
+		meta(meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title bsnav
+		block styles
+			link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+			link(rel="stylesheet" type="text/css" href="https://rawgit.com/fitodac/line-awesome/master/dist/css/line-awesome.min.css" crossorigin="anonymous")
+			link(rel="stylesheet" type="text/css" href="https://rawgit.com/fitodac/bsnav/master/dist/bsnav.min.css")
+			link(rel="stylesheet" type="text/css" href="assets/css/nitro.min.css")
+			//- link(rel="stylesheet" type="text/css" href="examples.min.css")
+			link(rel="stylesheet" type="text/css" href="landing.min.css")
+	
+	body
+		#landing
+			block content
+
+
+
+		block scripts
+			script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+			script(src="assets/js/nitro.js")
+			script(src="https://rawgit.com/fitodac/bsnav/master/dist/bsnav.min.js")
+		
+
+
+		block pageScripts
