@@ -14,8 +14,21 @@ jQuery(document).ready(function($){
 
 
 
-	$('.btn.ex-submenu').on('mouseenter', function(){
-		$('#example-dropdown .fake-submenu').hidden().delay(300).slideDown(400);
+	$('.btn.ex-submenu')
+	.on('mouseenter', function(){
+		var _ex = '#example-dropdown .fake-submenu',
+				_d = $(this).data('submenu'),
+				_img = $(this).data('img');
+		
+		$(_ex+' img').addClass('d-none');
+		$(_ex+' .'+_img).removeClass('d-none').addClass('submenu-example-'+_d);
+	})
+	.on('mouseleave', function(){
+		var _ex = '#example-dropdown .fake-submenu',
+				_d = $(this).data('submenu'),
+				_img = $(this).data('img');
+		
+		$(_ex+' .'+_img).removeClass('submenu-example-'+_d);
 	});
 
 });

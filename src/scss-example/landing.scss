@@ -173,29 +173,69 @@ $primary: #7ED321;
 
 
 	#example-dropdown{
-		padding-bottom: 250px;
+		// padding-bottom: 250px;
 
 		.fake-navbar{
-			width: 570px;
-			margin-left: -130px;
+			width: 680px;
+			margin-left: -200px;
 			box-shadow: 0 6px 10px rgba(#000, .06);
 		}//fake-navbar
 		
 		.fake-submenu{
-			width: 220px;
-			height: 200px;
-			top: 63px;
-			right: 147px;
-			position: absolute;
+			width: 710px;
+			height: 250px;
+			padding: 0 30px;
+			margin-left: -200px;
+			position: relative;
 			overflow: hidden;
 			
 			img{
-				width: 78%;
-				display: block;
-				margin: 0 auto;
+				position: absolute;
 				box-shadow: 0 6px 13px rgba(#000, .08);
 			}
+
+			.submenu{
+				right: 74px;
+			}//submenu
+
+			.submenu-horz{
+				width: 100%;
+				height: 72px;
+				right: 30px;
+			}//submenu-horz
+
+			.submenu-mega{
+				width: 100%;
+				height: 184px;
+				right: 30px;
+			}//submenu-mega
+
 		}//fake-submenu
+
+
+		.submenu-example-dropdown{
+			animation: ddDropdown .4s ease-out;
+		}
+
+		.submenu-example-fade{
+			animation: ddFade .4s ease-out;
+		}
+
+		.submenu-example-fadeUp{
+			animation: ddFadeUp .4s ease-out;
+		}
+
+		.submenu-example-pop{
+			animation: ddPop .4s ease-out;
+		}
+
+		.submenu-example-zoom{
+			animation: ddZoom .4s ease-out;
+		}
+
+		.submenu-example-mega{
+			animation: ddMega .4s ease-out;
+		}
 
 	}//example-dropdown
 
@@ -217,3 +257,87 @@ $primary: #7ED321;
 
 
 }//landing
+
+
+
+
+
+
+
+
+
+@keyframes ddDropdown{
+	0%{
+		top: -200px;
+	}
+
+	100%{
+		top: 0;
+	}
+}
+
+
+@keyframes ddFade{
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+
+@keyframes ddFadeUp{
+	0%{
+		opacity: 0;
+		margin-top: 30px;
+	}
+
+	100%{
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+
+
+@keyframes ddPop{
+	0%{
+		opacity: 0;
+	}
+
+	89%{
+		opacity: 0;
+	}
+
+	90%{
+		opacity: 1;
+	}
+}
+
+
+
+@keyframes ddZoom{
+	0%{
+		opacity: 0;
+		transform: scale(.7);
+	}
+
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+
+@keyframes ddMega{
+	0%{
+		top: -200px;
+	}
+
+	100%{
+		top: 0;
+	}
+}

@@ -127,7 +127,10 @@ block content
 			.col
 				#example-dropdown.example
 					img.fake-navbar(src="images/dropdown-fake-navbar.svg")
-					.fake-submenu: img(src="images/dropdown-fake-submenu.svg")
+					.fake-submenu
+						img.submenu(src="images/dropdown-fake-submenu.svg")
+						img.submenu-horz.d-none(src="images/dropdown-fake-submenu-horizontal.svg")
+						img.submenu-mega.d-none(src="images/dropdown-fake-megamenu.svg")
 
 
 			.col
@@ -136,16 +139,16 @@ block content
 				.row
 					.col-sm-4
 						ul.section-list
-							li: a.btn.ex-submenu(href="submenu-dropdown.html" target="_blank") Dropdown
-							li: a.btn.ex-submenu(href="megamenu.html" target="_blank") Mega Menu
-							li: a.btn.ex-submenu(href="submenu-horizontal.html" target="_blank") Horizontal Submenu
+							li: a.btn.ex-submenu(href="submenu-dropdown.html" data-submenu="dropdown" data-img="submenu" target="_blank") Dropdown
+							li: a.btn.ex-submenu(href="megamenu.html" data-submenu="mega" data-img="submenu-mega" target="_blank") Mega Menu
+							li: a.btn.ex-submenu(href="submenu-horizontal.html" data-submenu="dropdown" data-img="submenu-horz" target="_blank") Horizontal Submenu
 
 					.col-sm-4
 						ul.section-list
-							li: a.btn.ex-submenu(href="submenu-fade.html" target="_blank") Fade
-							li: a.btn.ex-submenu(href="submenu-fadeup.html" target="_blank") Fade Up
-							li: a.btn.ex-submenu(href="submenu-pop.html" target="_blank") Pop
-							li: a.btn.ex-submenu(href="submenu-zoom.html" target="_blank") Zoom
+							li: a.btn.ex-submenu(href="submenu-fade.html" data-submenu="fade" data-img="submenu" target="_blank") Fade
+							li: a.btn.ex-submenu(href="submenu-fadeup.html" data-submenu="fadeUp" data-img="submenu" target="_blank") Fade Up
+							li: a.btn.ex-submenu(href="submenu-pop.html" data-submenu="pop" data-img="submenu" target="_blank") Pop
+							li: a.btn.ex-submenu(href="submenu-zoom.html" data-submenu="zoom" data-img="submenu" target="_blank") Zoom
 
 					.col-sm-4
 
