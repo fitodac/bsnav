@@ -10,7 +10,7 @@ $submenu-width: 200px;
 	position: absolute;
 	pointer-events: none;
 	flex-direction: column;
-	transition: .3s;
+	transition: .3s ease-out;
 	transition-delay: .1s;
 	clip: rect(0, 100vw, 0, 0);
 
@@ -18,6 +18,7 @@ $submenu-width: 200px;
 	&.in{
 		pointer-events: initial;
 		clip: rect(0, 50vw, 2000px, 0);
+		transition: 2.4s ease-in;
 	}
 
 

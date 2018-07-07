@@ -5,20 +5,33 @@ block content
 		.container.text-center
 			h1.display-4 bsnav
 			p.lead Extended Bootstrap 4 navbar
+			.row
+				.col-sm-3.offset-3.text-right
+					a.btn.btn-info.btn-default.btn-outline.btn-cons(href="#") DOWNLOAD
+				.col-sm-3.text-left
+					a.btn.btn-info.btn-default.btn-outline.btn-cons(href="https://github.com/fitodac/bsnav") GITHUB
 
 
 
 
 
 
+	//- ********************************************************************************
+	//- STYLES
+	//- ********************************************************************************
 	.container
 		.row.align-items-center
 			.col
 				.browser
 					img(src="images/01.jpg")
 					.browser-wrapper
-						.example
+						#example-style.example
 							img#style-basic(src="images/style-basic.svg")
+							img.d-none#style-dark(src="images/style-dark.svg")
+							img.d-none#style-transparent(src="images/style-transparent.svg")
+							img.d-none#style-light(src="images/style-light.svg")
+							img.d-none#style-overlay(src="images/style-overlay.svg")
+							img.d-none#style-overlay-light(src="images/style-overlay-light.svg")
 
 
 			.col
@@ -27,169 +40,309 @@ block content
 				.row
 					.col-sm-4
 						ul.section-list
-							li: button.btn Basic
-							li: button.btn Dark
-							li: button.btn Transparent
+							li: a.btn(href="navbar-right.html" data-example="example-style" data-img="style-basic" target="_blank") Basic
+							li: a.btn(href="navbar-dark.html" data-example="example-style" data-img="style-dark" target="_blank") Dark
+							li: a.btn(href="navbar-transparent.html" data-example="example-style" data-img="style-transparent" target="_blank") Transparent
 
 					.col-sm-4
 						ul.section-list
-							li: button.btn Light
-							li: button.btn Overlay
-							li: button.btn Overlay light
+							li: a.btn(href="navbar-light.html" data-example="example-style" data-img="style-light" target="_blank") Light
+							li: a.btn(href="navbar-overlay.html" data-example="example-style" data-img="style-overlay" target="_blank") Overlay
+							li: a.btn(href="navbar-overlay-light.html" data-example="example-style" data-img="style-overlay-light" target="_blank") Overlay light
 
 					.col-sm-4
 
 
-	.h-170px
+	
 
 
 
 
 
 
-
-
+	.h-200px
+	//- ********************************************************************************
+	//- LAYOUT
+	//- ********************************************************************************
 	#layout.jumbotron.jumbotron-fluid
+		#example-layout.example
+			img#layout-menu-right(src="images/layout-menu-right.svg")
+			img.d-none#layout-menu-left(src="images/layout-menu-left.svg")
+			img.d-none#layout-brand-center(src="images/layout-brand-center.svg")
+			img.d-none#layout-brand-center-2(src="images/layout-brand-center-2.svg")
+			img.d-none#layout-brand-top(src="images/layout-brand-top.svg")
+
+
+
 		.container
-			.h3.section-title Layout
+			.h3.section-title.mb-5 Layout
+
 
 			.row
-				.col-sm-4
+				.col-sm-10.offset-1
+					.row
+						.col-sm-4
+							a(href="navbar-right.html" data-example="example-layout" data-img="layout-menu-right" target="_blank").btn
+								img.icon(src="images/layout-ico-menu-right.svg")
+								span Menu right
 
-				.col-sm-4
+						.col-sm-4
+							a(href="navbar-left.html" data-example="example-layout" data-img="layout-menu-left" target="_blank").btn
+								img.icon(src="images/layout-ico-menu-left.svg")
+								span Menu left
 
-				.col-sm-4
+						.col-sm-4
+							a(href="brand-centered.html" data-example="example-layout" data-img="layout-brand-center" target="_blank").btn
+								img.icon(src="images/layout-ico-brand-center.svg")
+								span Brand at center
+				
 
+					.row
+						.col-sm-4
+							a(href="brand-centered-between.html" data-example="example-layout" data-img="layout-brand-center-2" target="_blank").btn
+								img.icon(src="images/layout-ico-brand-center-2.svg")
+								span Brand at center 2
 
-
-
-
-
-
-
-	.container
-
-		h4 Styles
-
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-right.html" target="_blank")
-					.card-body
-						.card-text Navbar default
-						small.card-text The default clear style for navbars
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-dark.html" target="_blank")
-					.card-body
-						.card-text Navbar dark
-						small.card-text Dark background navbar
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-transparent.html" target="_blank")
-					.card-body
-						.card-text Navbar transparent
-						small.card-text Transparent navbar, perfect to use over images
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-light.html" target="_blank")
-					.card-body
-						.card-text Navbar light
-						small.card-text Transparent navbar with white items
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-overlay.html" target="_blank")
-					.card-body
-						.card-text Navbar overlay
-						small.card-text Navbar with overlay background
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-overlay-light.html" target="_blank")
-					.card-body
-						.card-text Navbar overlay light
-						small.card-text Navbar with overlay background with white items
-
-
-
-
-
-
-
-		h4 Layout
-
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-right.html" target="_blank")
-					.card-body
-						.card-text Navbar menu right
-						small.card-text Navbar with menu at right
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="navbar-left.html" target="_blank")
-					.card-body
-						.card-text Navbar menu left
-						small.card-text Navbar with menu at left
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="brand-centered.html" target="_blank")
-					.card-body
-						.card-text Brand at center
-						small.card-text Navbar with the brand at the center
+						.col-sm-4
+							a(href="brand-top.html" data-example="example-layout" data-img="layout-brand-top" target="_blank").btn
+								img.icon(src="images/layout-ico-brand-top.svg")
+								span Brand top
 		
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="brand-centered-between.html" target="_blank")
-					.card-body
-						.card-text Brand at center 2
-						small.card-text Center the brand and align each navbar to sides
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="brand-top.html" target="_blank")
-					.card-body
-						.card-text Brand top
-						small.card-text Brand above navbar
 
 
 
 
 
 
-		h4 Dropdown
 
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="submenu-dropdown.html" target="_blank")
-					.card-body
-						.card-text Dropdown
 
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="megamenu.html" target="_blank")
-					.card-body
-						.card-text Mega Menu
-			
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="submenu-horizontal.html" target="_blank")
-					.card-body
-						.card-text Submenu horizontal
 
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="submenu-fade.html" target="_blank")
-					.card-body
-						.card-text Fade
-						//- small.card-text Navbar with menu at right
 
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="submenu-fadeup.html" target="_blank")
-					.card-body
-						.card-text Fade up
+	.h-200px
+	//- ********************************************************************************
+	//- DROPDOWN
+	//- ********************************************************************************
+	.container
+		.row.align-items-center
+			.col
+				#example-dropdown.example
+					img.fake-navbar(src="images/dropdown-fake-navbar.svg")
+					.fake-submenu: img(src="images/dropdown-fake-submenu.svg")
 
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="submenu-pop.html" target="_blank")
-					.card-body
-						.card-text Pop
 
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="submenu-zoom.html" target="_blank")
-					.card-body
-						.card-text Zoom
+			.col
+				.h3.section-title Dropdown
+
+				.row
+					.col-sm-4
+						ul.section-list
+							li: a.btn.ex-submenu(href="submenu-dropdown.html" target="_blank") Dropdown
+							li: a.btn.ex-submenu(href="megamenu.html" target="_blank") Mega Menu
+							li: a.btn.ex-submenu(href="submenu-horizontal.html" target="_blank") Horizontal Submenu
+
+					.col-sm-4
+						ul.section-list
+							li: a.btn.ex-submenu(href="submenu-fade.html" target="_blank") Fade
+							li: a.btn.ex-submenu(href="submenu-fadeup.html" target="_blank") Fade Up
+							li: a.btn.ex-submenu(href="submenu-pop.html" target="_blank") Pop
+							li: a.btn.ex-submenu(href="submenu-zoom.html" target="_blank") Zoom
+
+					.col-sm-4
+
+
+
+
+
+
+
+
+
+
+
+	.h-200px
+	//- ********************************************************************************
+	//- SIDEBAR
+	//- ********************************************************************************
+	.container
+		.row.align-items-center
+			.col
+				.browser
+					img(src="images/03.jpg")
+					.browser-wrapper
+						.example
+							img#style-basic(src="images/style-basic.svg")
+
+
+			.col
+				.h3.section-title Sidebar
+
+				.row
+					.col-sm-4
+						ul.section-list
+							li: button.btn Sidebar
+							li: button.btn Right sidebar
+							li: button.btn Sidebar levels
+
+					.col-sm-4
+						ul.section-list
+							li: button.btn Right sidebar levels
+							li: button.btn Condensed sidebar
+							li: button.btn Condensed sidebar levels
+
+					.col-sm-4
+
+
+
+
+
+
+
+	.h-200px
+	//- ********************************************************************************
+	//- FIXED NAVBAR
+	//- ********************************************************************************
+	#fixed-navbar.jumbotron.jumbotron-fluid
+		.container
+			.row.align-items-center
+				.col
+					.browser
+						//- img(src="images/01.jpg")
+						.browser-wrapper
+							.example
+								img#style-basic(src="images/style-basic.svg")
+
+
+				.col
+					.h3.section-title Fixed navbar
+
+					.row
+						.col-sm-4
+							ul.section-list
+								li: button.btn Sticky
+								li: button.btn Sticky slide
+								li: button.btn Sticky fade
+
+
+
+
+
+
+
+
+
+
+	.h-200px
+	//- ********************************************************************************
+	//- SCROLLSPY
+	//- ********************************************************************************
+	.container
+		.row.align-items-center
+			.col
+				.browser
+					img(src="images/05.jpg")
+					.browser-wrapper
+						.example
+							img#style-basic(src="images/style-basic.svg")
+
+
+			.col
+				.h3.section-title Scrollspy
+
+				.row
+					.col-sm-4
+						ul.section-list
+							li: button.btn Scrollspy navbar
+
+					.col-sm-4
+						ul.section-list
+							li: button.btn Scrollspy sidebar
+
+					.col-sm-4
+
+
+
+
+
+
+
+
+
+	.h-200px
+	//- ********************************************************************************
+	//- ITEMS
+	//- ********************************************************************************
+	.container
+		.text-center
+			.h3.section-title Navbar items
+			.lead Different styles options for navbar items
+		.h-70px
+
+		.fake-nav
+			ul
+				li: a(href="#") Home
+				li: a(href="#") About Us
+				li: a(href="#") News
+				li: a.active-item(href="#") Active item
+				li: a(href="#") Contact
+
+
+
+
+
+
+
+
+	.h-200px
+	//- ********************************************************************************
+	//- TOGGLER BUTTONS
+	//- ********************************************************************************
+	.container
+		.text-center
+			.h3.section-title Toggler buttons
+			.lead Animated toggler buttons
+		.h-70px
+
+		
+
+
+
+	footer.main-footer
+		.container
+			.row
+				.col-sm-4.offset-4
+					h5 Credits
+					ul
+						li: a(href="#") Bootsttrap 4
+						li: a(href="#") Line Awesome
+						li: a(href="#") jQuery
+						li: a(href="#") Unsplash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
 			
 
 

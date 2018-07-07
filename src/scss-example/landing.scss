@@ -1,6 +1,7 @@
 $primary: #7ED321;
 
 
+
 #landing{
 	background: #fff;
 	color: #4A4A4A;
@@ -13,9 +14,15 @@ $primary: #7ED321;
 		h1{
 			background: url('images/brand.png') no-repeat center / 100% auto;
 			font-size: 0;
-			width: 200px;
-			height: 54px;
+			width: 150px;
+			height: 40px;
 			margin: 0 auto 30px;
+		}
+
+		.lead{
+			font-size: 1.4rem;
+			font-weight: 400;
+			margin-bottom: 40px;
 		}
 	}//hero
 
@@ -24,9 +31,9 @@ $primary: #7ED321;
 
 	.browser{
 		border: solid 1px #eee;
-		width: 600px;
-		height: 360px;
-		margin-left: -20%;
+		width: 730px;
+		height: 430px;
+		margin-left: -220px;
 		position: relative;
 		border-radius: 10px;
 		box-shadow: 0 20px 30px rgba(#000,.1);
@@ -67,7 +74,8 @@ $primary: #7ED321;
 				z-index: 2;
 
 				> img{
-					width: 101%;
+					width: 100%;
+					min-height: 50px;
 				}// > img
 
 			}//example
@@ -96,7 +104,7 @@ $primary: #7ED321;
 			margin-bottom: 5px;
 			display: block;
 
-			button{
+			.btn{
 				color: inherit;
 				width: 100%;
 
@@ -120,13 +128,92 @@ $primary: #7ED321;
 		background: #57245D url('images/02.jpg') no-repeat center / cover;
 		color: #fff;
 		padding: 200px 0;
+		position: relative;
 
 
 		.section-title{
 			text-align: center;
 		}//section-title
 
+
+		.example{
+			left: 0;
+			right: 0;
+			top: 0;
+			position: absolute;
+
+			img{
+				width: 100%;
+				min-height: 51px;
+				margin-top: -1px;
+			}
+		}//example
+
+
+		.btn{
+			color: #fff;
+			text-align: center;
+			padding: 0;
+			margin-bottom: 30px;
+			display: block;
+
+			img{
+				margin: 0 auto 15px;
+				display: block;
+			}
+		}//btn
+
 	}//layout
+
+
+
+
+
+
+
+
+	#example-dropdown{
+		padding-bottom: 250px;
+
+		.fake-navbar{
+			width: 570px;
+			margin-left: -130px;
+			box-shadow: 0 6px 10px rgba(#000, .06);
+		}//fake-navbar
+		
+		.fake-submenu{
+			width: 220px;
+			height: 200px;
+			top: 63px;
+			right: 147px;
+			position: absolute;
+			overflow: hidden;
+			
+			img{
+				width: 78%;
+				display: block;
+				margin: 0 auto;
+				box-shadow: 0 6px 13px rgba(#000, .08);
+			}
+		}//fake-submenu
+
+	}//example-dropdown
+
+
+
+
+
+
+
+	#fixed-navbar{
+		background: #301739 url('images/04.jpg') no-repeat center / cover;
+		color: #fff;
+		padding: 200px 0;
+
+		.browser{
+			background: rgba(#fff,.2);
+		}//browser
+	}//fixed-navbar
 
 
 }//landing
