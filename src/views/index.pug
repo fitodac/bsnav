@@ -3,13 +3,13 @@ extends templates/_template-frontpage.pug
 block content
 	.hero.jumbotron.jumbotron-fluid
 		.container.text-center
-			h1.display-4 bsnav
+			h1.logo bsnav
 			p.lead Extended Bootstrap 4 navbar
 			.row
 				.col-sm-3.offset-3.text-right
-					a.btn.btn-info.btn-default.btn-outline.btn-cons(href="#") DOWNLOAD
+					a.btn.btn-light.btn-outline.btn-cons(href="#") DOWNLOAD
 				.col-sm-3.text-left
-					a.btn.btn-info.btn-default.btn-outline.btn-cons(href="https://github.com/fitodac/bsnav") GITHUB
+					a.btn.btn-light.btn-outline.btn-cons(href="https://github.com/fitodac/bsnav") GITHUB
 
 
 
@@ -19,41 +19,41 @@ block content
 	//- ********************************************************************************
 	//- STYLES
 	//- ********************************************************************************
+	.h3.text-center.mb-5 Styles
+
 	.container
-		.row.align-items-center
-			.col
-				.browser
-					img(src="images/01.jpg")
-					.browser-wrapper
-						#example-style.example
-							img#style-basic(src="images/style-basic.svg")
-							img.d-none#style-dark(src="images/style-dark.svg")
-							img.d-none#style-transparent(src="images/style-transparent.svg")
-							img.d-none#style-light(src="images/style-light.svg")
-							img.d-none#style-overlay(src="images/style-overlay.svg")
-							img.d-none#style-overlay-light(src="images/style-overlay-light.svg")
+		.row.pb-3
+			.col-sm-3
+				a.tmb(href="navbar-right.html" target="_blank")
+					img(src="images/basic.svg")
+					span Basic
 
+			.col-sm-3
+				a.tmb(href="navbar-dark.html" target="_blank")
+					img(src="images/dark.svg")
+					span Dark
 
-			.col
-				.h3.section-title Styles
+			.col-sm-3
+				a.tmb(href="navbar-transparent.html" target="_blank")
+					img(src="images/transparent.svg")
+					span Transparent
 
-				.row
-					.col-sm-4
-						ul.section-list
-							li: a.btn(href="navbar-right.html" data-example="example-style" data-img="style-basic" target="_blank") Basic
-							li: a.btn(href="navbar-dark.html" data-example="example-style" data-img="style-dark" target="_blank") Dark
-							li: a.btn(href="navbar-transparent.html" data-example="example-style" data-img="style-transparent" target="_blank") Transparent
+			.col-sm-3
+				a.tmb(href="navbar-light.html" target="_blank")
+					img(src="images/light.svg")
+					span Light
+		
+		.row
+			.col-sm-3
+				a.tmb(href="navbar-overlay.html" target="_blank")
+					img(src="images/transparent.svg")
+					span Overlay
 
-					.col-sm-4
-						ul.section-list
-							li: a.btn(href="navbar-light.html" data-example="example-style" data-img="style-light" target="_blank") Light
-							li: a.btn(href="navbar-overlay.html" data-example="example-style" data-img="style-overlay" target="_blank") Overlay
-							li: a.btn(href="navbar-overlay-light.html" data-example="example-style" data-img="style-overlay-light" target="_blank") Overlay light
+			.col-sm-3
+				a.tmb(href="navbar-overlay-light.html" target="_blank")
+					img(src="images/light.svg")
+					span Overlay light
 
-					.col-sm-4
-
-
-	
 
 
 
@@ -64,52 +64,37 @@ block content
 	//- ********************************************************************************
 	//- LAYOUT
 	//- ********************************************************************************
-	#layout.jumbotron.jumbotron-fluid
-		#example-layout.example
-			img#layout-menu-right(src="images/layout-menu-right.svg")
-			img.d-none#layout-menu-left(src="images/layout-menu-left.svg")
-			img.d-none#layout-brand-center(src="images/layout-brand-center.svg")
-			img.d-none#layout-brand-center-2(src="images/layout-brand-center-2.svg")
-			img.d-none#layout-brand-top(src="images/layout-brand-top.svg")
+	.h3.text-center.mb-5 Layout
+
+	.container
+		.row.pb-3
+			.col-sm-3
+				a.tmb(href="navbar-right.html" target="_blank")
+					img(src="images/menu-right.svg")
+					span Menu right
+			
+			.col-sm-3
+				a.tmb(href="navbar-left.html" target="_blank")
+					img(src="images/menu-left.svg")
+					span Menu left
+			
+			.col-sm-3
+				a.tmb(href="brand-centered.html" target="_blank")
+					img(src="images/brand-at-center.svg")
+					span Brand at center
+			
+			.col-sm-3
+				a.tmb(href="brand-centered-between.html" target="_blank")
+					img(src="images/brand-at-center-2.svg")
+					span Brand at center 2
 
 
-
-		.container
-			.h3.section-title.mb-5 Layout
-
-
-			.row
-				.col-sm-10.offset-1
-					.row
-						.col-sm-4
-							a(href="navbar-right.html" data-example="example-layout" data-img="layout-menu-right" target="_blank").btn
-								img.icon(src="images/layout-ico-menu-right.svg")
-								span Menu right
-
-						.col-sm-4
-							a(href="navbar-left.html" data-example="example-layout" data-img="layout-menu-left" target="_blank").btn
-								img.icon(src="images/layout-ico-menu-left.svg")
-								span Menu left
-
-						.col-sm-4
-							a(href="brand-centered.html" data-example="example-layout" data-img="layout-brand-center" target="_blank").btn
-								img.icon(src="images/layout-ico-brand-center.svg")
-								span Brand at center
-				
-
-					.row
-						.col-sm-4
-							a(href="brand-centered-between.html" data-example="example-layout" data-img="layout-brand-center-2" target="_blank").btn
-								img.icon(src="images/layout-ico-brand-center-2.svg")
-								span Brand at center 2
-
-						.col-sm-4
-							a(href="brand-top.html" data-example="example-layout" data-img="layout-brand-top" target="_blank").btn
-								img.icon(src="images/layout-ico-brand-top.svg")
-								span Brand top
+		.row
+			.col-sm-3
+				a.tmb(href="brand-top.html" target="_blank")
+					img(src="images/brand-top.svg")
+					span Brand top
 		
-
-
 
 
 
@@ -122,39 +107,46 @@ block content
 	//- ********************************************************************************
 	//- DROPDOWN
 	//- ********************************************************************************
+	.h3.text-center.mb-5 Dropdown
+
 	.container
-		.row.align-items-center
-			.col
-				#example-dropdown.example
-					img.fake-navbar(src="images/dropdown-fake-navbar.svg")
-					.fake-submenu
-						img.submenu(src="images/dropdown-fake-submenu.svg")
-						img.submenu-horz.d-none(src="images/dropdown-fake-submenu-horizontal.svg")
-						img.submenu-mega.d-none(src="images/dropdown-fake-megamenu.svg")
+		.row.pb-3
+			.col-sm-3
+				a.tmb(href="submenu-dropdown.html" target="_blank")
+					img(src="images/menu-right.svg")
+					span Dropdown
+			
+			.col-sm-3
+				a.tmb(href="megamenu.html" target="_blank")
+					img(src="images/menu-left.svg")
+					span Mega Menu
+			
+			.col-sm-3
+				a.tmb(href="submenu-horizontal.html" target="_blank")
+					img(src="images/brand-at-center.svg")
+					span Horizontal Submenu
+			
+			.col-sm-3
+				a.tmb(href="submenu-fade.html" target="_blank")
+					img(src="images/brand-at-center-2.svg")
+					span Fade
+		
 
-
-			.col
-				.h3.section-title Dropdown
-
-				.row
-					.col-sm-4
-						ul.section-list
-							li: a.btn.ex-submenu(href="submenu-dropdown.html" data-submenu="dropdown" data-img="submenu" target="_blank") Dropdown
-							li: a.btn.ex-submenu(href="megamenu.html" data-submenu="mega" data-img="submenu-mega" target="_blank") Mega Menu
-							li: a.btn.ex-submenu(href="submenu-horizontal.html" data-submenu="dropdown" data-img="submenu-horz" target="_blank") Horizontal Submenu
-
-					.col-sm-4
-						ul.section-list
-							li: a.btn.ex-submenu(href="submenu-fade.html" data-submenu="fade" data-img="submenu" target="_blank") Fade
-							li: a.btn.ex-submenu(href="submenu-fadeup.html" data-submenu="fadeUp" data-img="submenu" target="_blank") Fade Up
-							li: a.btn.ex-submenu(href="submenu-pop.html" data-submenu="pop" data-img="submenu" target="_blank") Pop
-							li: a.btn.ex-submenu(href="submenu-zoom.html" data-submenu="zoom" data-img="submenu" target="_blank") Zoom
-
-					.col-sm-4
-
-
-
-
+		.row
+			.col-sm-3
+				a.tmb(href="submenu-fadeup.html" target="_blank")
+					img(src="images/menu-right.svg")
+					span Fade Up
+			
+			.col-sm-3
+				a.tmb(href="submenu-pop.html" target="_blank")
+					img(src="images/menu-left.svg")
+					span Pop
+			
+			.col-sm-3
+				a.tmb(href="submenu-zoom.html" target="_blank")
+					img(src="images/brand-at-center.svg")
+					span Zoom
 
 
 
@@ -166,33 +158,42 @@ block content
 	//- ********************************************************************************
 	//- SIDEBAR
 	//- ********************************************************************************
+	.h3.text-center.mb-5 Sidebar
+
 	.container
-		.row.align-items-center
-			.col
-				.browser
-					img(src="images/03.jpg")
-					.browser-wrapper
-						.example
-							img#style-basic(src="images/style-basic.svg")
+		.row.pb-3
+			.col-sm-3
+				a.tmb(href="sidebar.html" target="_blank")
+					img(src="images/sidebar.svg")
+					span Sidebar
+			
+			.col-sm-3
+				a.tmb(href="sidebar-right.html" target="_blank")
+					img(src="images/sidebar-right.svg")
+					span Right sidebar
+			
+			.col-sm-3
+				a.tmb(href="sidebar-levels.html" target="_blank")
+					img(src="images/sidebar-levels.svg")
+					span Sidebar levels
 
+			.col-sm-3
+				a.tmb(href="sidebar-levels-right.html" target="_blank")
+					img(src="images/sidebar-right-levels.svg")
+					span Right sidebar levels
+		
 
-			.col
-				.h3.section-title Sidebar
+		.row
+			.col-sm-3
+				a.tmb(href="sidebar-condensed.html" target="_blank")
+					img(src="images/sidebar-condensed.svg")
+					span Condensed sidebar
+			
+			.col-sm-3
+				a.tmb(href="sidebar-condensed-right.html" target="_blank")
+					img(src="images/sidebar-condensed-right.svg")
+					span Condensed right sidebar
 
-				.row
-					.col-sm-4
-						ul.section-list
-							li: button.btn Sidebar
-							li: button.btn Right sidebar
-							li: button.btn Sidebar levels
-
-					.col-sm-4
-						ul.section-list
-							li: button.btn Right sidebar levels
-							li: button.btn Condensed sidebar
-							li: button.btn Condensed sidebar levels
-
-					.col-sm-4
 
 
 
@@ -204,27 +205,24 @@ block content
 	//- ********************************************************************************
 	//- FIXED NAVBAR
 	//- ********************************************************************************
-	#fixed-navbar.jumbotron.jumbotron-fluid
-		.container
-			.row.align-items-center
-				.col
-					.browser
-						//- img(src="images/01.jpg")
-						.browser-wrapper
-							.example
-								img#style-basic(src="images/style-basic.svg")
+	.h3.text-center.mb-5 Fixed navbar
 
+	.container
+		.row.pb-3.justify-content-center
+			.col-sm-3
+				a.tmb(href="sticky.html" target="_blank")
+					img(src="images/sticky.svg")
+					span Sidebar
+				
+			.col-sm-3
+				a.tmb(href="sticky-slide.html" target="_blank")
+					img(src="images/sticky-slide.svg")
+					span Sidebar
 
-				.col
-					.h3.section-title Fixed navbar
-
-					.row
-						.col-sm-4
-							ul.section-list
-								li: button.btn Sticky
-								li: button.btn Sticky slide
-								li: button.btn Sticky fade
-
+			.col-sm-3
+				a.tmb(href="sticky-fade.html" target="_blank")
+					img(src="images/sticky-fade.svg")
+					span Sidebar
 
 
 
@@ -238,30 +236,14 @@ block content
 	//- ********************************************************************************
 	//- SCROLLSPY
 	//- ********************************************************************************
+	.h3.text-center.mb-5 Scrollspy
+
 	.container
-		.row.align-items-center
-			.col
-				.browser
-					img(src="images/05.jpg")
-					.browser-wrapper
-						.example
-							img#style-basic(src="images/style-basic.svg")
-
-
-			.col
-				.h3.section-title Scrollspy
-
-				.row
-					.col-sm-4
-						ul.section-list
-							li: button.btn Scrollspy navbar
-
-					.col-sm-4
-						ul.section-list
-							li: button.btn Scrollspy sidebar
-
-					.col-sm-4
-
+		.row.pb-3.justify-content-center
+			.col-sm-3
+				a.tmb(href="scrollspy.html" target="_blank")
+					img(src="images/scrollspy.svg")
+					span Scrollspy navbar
 
 
 
@@ -274,20 +256,14 @@ block content
 	//- ********************************************************************************
 	//- ITEMS
 	//- ********************************************************************************
+	.h3.text-center.mb-5 Navbar items
+
 	.container
-		.text-center
-			.h3.section-title Navbar items
-			.lead Different styles options for navbar items
-		.h-70px
-
-		.fake-nav
-			ul
-				li: a(href="#") Home
-				li: a(href="#") About Us
-				li: a(href="#") News
-				li: a.active-item(href="#") Active item
-				li: a(href="#") Contact
-
+		.row.pb-3.justify-content-center
+			.col-sm-4
+				a.tmb(href="active-items.html" target="_blank")
+					img(src="images/navbar-items.svg")
+					span Items
 
 
 
@@ -299,153 +275,10 @@ block content
 	//- ********************************************************************************
 	//- TOGGLER BUTTONS
 	//- ********************************************************************************
+	.h3.text-center.mb-5 Toggler buttons
+
 	.container
-		.text-center
-			.h3.section-title Toggler buttons
-			.lead Animated toggler buttons
-		.h-70px
-
-		
-
-
-
-	footer.main-footer
-		.container
-			.row
-				.col-sm-4.offset-4
-					h5 Credits
-					ul
-						li: a(href="#") Bootsttrap 4
-						li: a(href="#") Line Awesome
-						li: a(href="#") jQuery
-						li: a(href="#") Unsplash
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-		
-			
-
-
-
-
-
-		h4 Sidebar
-
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sidebar.html" target="_blank")
-					.card-body
-						.card-text Sidebar
-						small.card-text A simple sidebar menu example
-			
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sidebar-right.html" target="_blank")
-					.card-body
-						.card-text Sidebar right
-						small.card-text Option with right sidebar
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sidebar-levels.html" target="_blank")
-					.card-body
-						.card-text Sidebar levels
-						small.card-text Sidebar with nested sub-menus
-			
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sidebar-levels-right.html" target="_blank")
-					.card-body
-						.card-text Sidebar right levels
-						small.card-text Sidebar with nested sub-menus
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sidebar-condensed.html" target="_blank")
-					.card-body
-						.card-text Sidebar condensed
-						small.card-text Shown an icons list and animate the sidebar on mouse over
-			
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sidebar-condensed-right.html" target="_blank")
-					.card-body
-						.card-text Sidebar condensed right
-						small.card-text With the condensed sidebar at the right
-
-
-
-
-		h4 Fixed navbar
-
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sticky.html" target="_blank")
-					.card-body
-						.card-text Sticky
-						small.card-text Stick navbar to the top of the page without any effect, only sticked
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sticky-slide.html" target="_blank")
-					.card-body
-						.card-text Sticky slide
-						small.card-text Stick navbar to the top of the page with a slide effect
-
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="sticky-fade.html" target="_blank")
-					.card-body
-						.card-text Sticky fade
-						small.card-text Stick navbar to the top of the page with a fade effect
-		
-
-
-
-		h4 Scrollspy
-
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="scrollspy.html" target="_blank")
-					.card-body
-						.card-text Scrollspy navbar
-						//- small.card-text Stick navbar to the top of the page with a slide effect
-		
-
-
-
-		h4 Navbar items
-
-		.row.mb-5
-			.col-md-4.col-sm-6.mb-3
-				a.card(href="active-items.html" target="_blank")
-					.card-body
-						.card-text Active items
-						//- small.card-text Stick navbar to the top of the page with a slide effect
-
-
-
-
-		h4 Toggler buttons
-		p.mb-5 Animated toggler buttons
-
-		.row.mb-3
+		.row.pb-3.justify-content-center
 			.col-sm-2.text-center
 				button.navbar-toggler.toggler-spin.mb-3
 					span.navbar-toggler-icon
@@ -461,18 +294,21 @@ block content
 					span.navbar-toggler-icon
 				p toggler-spring
 
+		
 
 
 
 
 
 
-
-
-	.jumbotron.jumbotron-fluid.bg-white
+	.h-200px
+	footer.main-footer
 		.container
-			p: strong Credits
-			p.
-				Framework: #[a(href="http://getbootstrap.com/") Bootstrap v4] #[br]
-				Icons: #[a(href="https://github.com/icons8/line-awesome") Line Awesome] #[br]
-				Javascript: #[a(href="https://code.jquery.com/jquery/") jQuery], #[a(href="http://getbootstrap.com/") Bootstrap] #[br]
+			.row
+				.col-sm-4.offset-4
+					h5 Credits
+					ul.list-unstyled
+						li: a(href="http://getbootstrap.com/") Bootsttrap 4
+						li: a(href="https://github.com/icons8/line-awesome") Line Awesome
+						li: a(href="https://code.jquery.com/jquery/") jQuery
+						li: a(href="https://picsum.photos/") Lorem Picsum
