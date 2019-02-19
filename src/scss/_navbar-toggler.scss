@@ -11,6 +11,8 @@
 	cursor: pointer;
 
 
+
+
 	.navbar-toggler-icon{
 		display: block;
 		top: 10px;
@@ -96,6 +98,8 @@
 
 
 
+
+
 	/*------------------------------------------------------------*/
 	/*	ELASTIC
 	/*------------------------------------------------------------*/
@@ -138,6 +142,9 @@
     }//active
 
 	}//toggler-elastic
+
+
+
 
 
 
@@ -187,5 +194,38 @@
 	}//toggler-spring
 
 
+
+
+
+	&.active, 
+	&:hover, 
+	&:active, 
+	&:focus, 
+	&:active:focus,
+
+	&.active.btn, 
+	&.active.focus.btn, 
+	&.btn:active, 
+	&.btn:active:focus, 
+	&.btn:active:hover, 
+	&.btn:focus, 
+	&.btn:hover, 
+	&.btn:not(:disabled):not(.disabled).active, 
+	&.btn:not(:disabled):not(.disabled):active, 
+	&.focus.btn, 
+	&button.active, 
+	&button.active.focus, 
+	&button.focus, 
+	&button:active, 
+	&button:active:focus, 
+	&button:active:hover, 
+	&button:focus, 
+	&button:hover, 
+	&button:not(:disabled):not(.disabled).active, 
+	&button:not(:disabled):not(.disabled):active{
+		background: transparent !important;
+		border: none !important;
+		border-color: transparent !important;
+	}
 
 }//navbar-toggler
