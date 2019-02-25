@@ -7,6 +7,11 @@
 	flex-flow: column;
 
 
+	> .container{
+		flex-flow: column;
+	}
+
+
 	.navbar-brand{
 		margin-left: 0;
 		margin-right: 0;
