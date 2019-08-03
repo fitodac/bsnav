@@ -10,7 +10,6 @@
 			this.event();
 			this.toggler();
 			this.dropdown();
-			this.mobileMenu();
 			this.sideMenu();
 			this.navbarSticky();
 			this.scrollspy();
@@ -244,9 +243,8 @@
 
 
 	// Initialize
-	$(document).ready(function(){
-		bsnav.initialize();
-	});
+	$(document).ready(function(){ bsnav.initialize() });
+	$(window).load(function(){ bsnav.mobileMenu() });
 
 
 }(jQuery));

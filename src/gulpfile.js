@@ -2,6 +2,7 @@ var gulp 				= require('gulp'),
 		pug 				= require('gulp-pug'), // npm install gulp-pug		
 		concat 			= require('gulp-concat'), // npm install gulp-concat
 		uglify 			= require('gulp-uglify'), // npm install gulp-uglify
+		minify 			= require('gulp-minify'), // npm install gulp-minify
 		rename 			= require('gulp-rename'), // npm install gulp-rename
 		sass 				= require('gulp-sass'), // npm install node-sass
 		cssmin 			= require('gulp-cssmin'), // npm install gulp-cssmin
@@ -11,20 +12,16 @@ var gulp 				= require('gulp'),
 
 
 
-// To compile js, just run 'gulp scripts' on console and be sure to have the right paths.
-gulp.task('scripts', function(){  
+gulp.task('js', function(cb){
 	gulp.src('js/*.js')
-		// Compile
-		.pipe(concat('bsnav.js'))
-		// .pipe(gulp.dest('../dist'))
-		
-		// Minify
-		.pipe(rename('bsnav.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('../dist'))
+	.pipe(minify({noSource: true}))
+	.pipe(rename('bsnav.min.js'))
+	.pipe(gulp.dest('../dist/'));
 
-		.pipe(notify({ message: 'Scripts are compiled!', onLast: true }));
+	console.log('Scripts are compiled!');
+	cb();
 });
+
 
 
 
@@ -42,11 +39,10 @@ gulp.task('sass', function(cb){
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('../dist'))
+		.pipe(gulp.dest('../dist'));
 
-		.pipe(notify({ message: 'SASS compiled!', onLast: true }));
-
-		return cb();
+		console.log('SASS compiled!');
+		cb();
 });
 
 
@@ -61,22 +57,23 @@ gulp.task('sass-example', function(cb){
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('../docs/'))
+		.pipe(gulp.dest('../docs/'));
 
-		.pipe(notify({ message: 'SASS compiled!', onLast: true }));
-
-		return cb();
+		console.log('SASS compiled!')
+		cb();
 });
 
 
 
 
 // COMPILE PUG
-gulp.task('pug', function buildHTML() {
-  return gulp.src('views/*.pug')
+gulp.task('pug', function buildHTML(cb) {
+  gulp.src('views/*.pug')
 	.pipe(pug({ pretty: true }))
-	.pipe(gulp.dest('../docs/'))
-	.pipe(notify({ message: 'Pug compiled!', onLast: true }));
+	.pipe(gulp.dest('../docs/'));
+
+	console.log('Pug compiled!');
+	cb();
 });
 
 
@@ -89,5 +86,5 @@ gulp.task('watch', function(cb){
 	gulp.watch('js/**/*.js', ['scripts']);
 	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('scss-example/**/*.scss', ['sass-example']);
-	return cb();
+	cb();
 });
