@@ -175,7 +175,7 @@
 		&.active{
       .navbar-toggler-icon{
 				transition-delay: 0.22s;
-        background-color: transparent;
+        background-color: transparent !important;
 
         &::before {
           top: 0;
