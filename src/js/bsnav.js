@@ -244,7 +244,7 @@
 
 	// Initialize
 	$(document).ready(function(){ bsnav.initialize() });
-	$(window).load(function(){ bsnav.mobileMenu() });
+	$(window).on('load', function(){ bsnav.mobileMenu() });
 
 
 }(jQuery));
