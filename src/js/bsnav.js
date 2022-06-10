@@ -68,6 +68,7 @@
 
 				$('.bsnav .navbar-mobile').each(function(){
 					var _m = $(this).clone();
+					_m.find('.dropdown').removeClass('dropdown');
 					_m_id = _m.attr('id');
 					if (_m_id) {
 						_m.attr('id', _m_id + '-bsnav');
