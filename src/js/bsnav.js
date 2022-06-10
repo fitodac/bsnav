@@ -68,7 +68,14 @@
 
 				$('.bsnav .navbar-mobile').each(function(){
 					var _m = $(this).clone();
-					_m.find('.dropdown').removeClass('dropdown');
+					_m_id = _m.attr('id');
+					if (_m_id) {
+						_m.attr('id', _m_id + '-bsnav');
+					}
+					_m.find('[id]').each((_i, el) => {
+						var _m_child_id = $(el).attr('id');
+						$(el).attr('id', _m_child_id + '-bsnav');
+					})
 					_m.appendTo('.bsnav-mobile .navbar');
 				});
 
