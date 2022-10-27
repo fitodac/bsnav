@@ -1,3 +1,5 @@
+# This project is no longer being maintained. Thanks.
+
 # bsnav
 **Bsnav** adds features to the Bootstrap 4 navbar element.
 
